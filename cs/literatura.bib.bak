@@ -1,0 +1,260 @@
+% Encoding: UTF-8
+%
+%  An example of a bibliographical database for bibTeX
+%
+%  Recommended software for maintenance of *.bib files:
+%    JabRef, http://jabref.sourceforge.net/
+%
+%  BEWARE:
+%
+%    *  If a name contains a capital letter, which must be kept such,
+%       use curly brackets ({T}hailand, {HIV}).
+%
+%  ===========================================================================
+
+@Book{Andel07,
+  title     = {Základy matematické statistiky},
+  publisher = {Matfyzpress},
+  year      = {2007},
+  author    = {Anděl, J.},
+  series    = {Druhé opravené vydání},
+  address   = {Praha},
+  isbn      = {80-7378-001-1},
+  groups    = {Vzor},
+}
+
+@Book{Andel98,
+  title     = {Statistické metody},
+  publisher = {Matfyzpress},
+  year      = {1998},
+  author    = {Anděl, J.},
+  series    = {Druhé přepracované vydání},
+  address   = {Praha},
+  isbn      = {80-85863-27-8},
+  groups    = {Vzor},
+}
+
+@Article{Cox72,
+  author  = {Cox, D. R.},
+  title   = {Regression models and life-tables (with {D}iscussion)},
+  journal = {Journal of the Royal Statistical Society, Series B},
+  year    = {1972},
+  volume  = {34},
+  number  = {2},
+  pages   = {187--220},
+  groups  = {Vzor},
+}
+
+@Article{DempsterLairdRubin77,
+  author  = {Dempster, A. P. and Laird, N. M. and Rubin, D. B.},
+  title   = {Maximum likelihood from incomplete data via the {EM} algorithm},
+  journal = {Journal of the Royal Statistical Society, Series B},
+  year    = {1977},
+  volume  = {39},
+  number  = {1},
+  pages   = {1--38},
+  groups  = {Vzor},
+}
+
+@Article{Genberget08,
+  author  = {Genberg, B. L. and Kulich, M. and Kawichai, S. and Modiba, P. and Chingono, A. and Kilonzo, G. P. and Richter, L. and Pettifor, A. and Sweat, M. and Celentano, D. D.},
+  title   = {{HIV} risk behaviors in Sub-{S}aharan {A}frica and {N}orthern {T}hailand: {B}aseline behavioral data from project {A}ccept},
+  journal = {Journal of Acquired Immune Deficiency Syndrome},
+  year    = {2008},
+  volume  = {49},
+  pages   = {309--319},
+  groups  = {Vzor},
+}
+
+@Article{KaplanMeier58,
+  author  = {Kaplan, E. L. and Meier, P.},
+  title   = {Nonparametric estimation from incomplete observations},
+  journal = {Journal of the American Statistical Association},
+  year    = {1958},
+  volume  = {53},
+  number  = {282},
+  pages   = {457--481},
+  groups  = {Vzor},
+}
+
+@Book{LehmannCasella98,
+  title     = {Theory of Point Estimation},
+  publisher = {Springer-Verlag},
+  year      = {1998},
+  author    = {Lehmann, E. L. and Casella, G.},
+  series    = {{S}econd {E}dition},
+  address   = {New York},
+  isbn      = {0-387-98502-6},
+  groups    = {Vzor},
+}
+
+@Article{Student08,
+  author  = {Student},
+  title   = {On the probable error of the mean},
+  journal = {Biometrika},
+  year    = {1908},
+  volume  = {6},
+  pages   = {1-25},
+  groups  = {Vzor},
+}
+
+@Misc{MOLPRO,
+  author  = {H.-J. Werner and P. J. Knowles and G. Knizia and F. R. Manby and M. {Sch\"{u}tz} and P. Celani and T. Korona and R. Lindh and A. Mitrushenkov and G. Rauhut and K. R. Shamasundar and T. B. Adler and R. D. Amos and A. Bernhardsson and A. Berning and D. L. Cooper and M. J. O. Deegan and A. J. Dobbyn and F. Eckert and E. Goll and C. Hampel and A. Hesselmann and G. Hetzer and T. Hrenar and G. Jansen and C. K\"oppl and Y. Liu and A. W. Lloyd and R. A. Mata and A. J. May and S. J. McNicholas and W. Meyer and M. E. Mura and A. Nicklass and D. P. O'Neill and P. Palmieri and D. Peng and K. Pfl\"uger and R. Pitzer and M. Reiher and T. Shiozaki and H. Stoll and A. J. Stone and R. Tarroni and T. Thorsteinsson and M. Wang},
+  title   = {MOLPRO, version 2012.1, a package of ab initio programs},
+  year    = {2012},
+  note    = {see } # molpro_url,
+  address = molpro_address,
+  groups  = {MOLPRO},
+}
+
+@Misc{MOLPRO_brief,
+  author  = {H.-J. Werner and P. J. Knowles and G. Knizia and F. R. Manby and M. {Sch\"{u}tz} and others},
+  title   = {MOLPRO, version 2012.1, a package of ab initio programs},
+  year    = {2012},
+  note    = {see } # molpro_url,
+  address = molpro_address,
+  groups  = {MOLPRO},
+}
+
+@Article{MOLPRO-WIREs,
+  author  = {Werner, H.-J. and Knowles, P. J. and Knizia, G. and Manby, F. R. and Sch{\"u}tz, M.},
+  title   = {{Molpro: a general‐purpose quantum chemistry program package}},
+  journal = {WIREs Comput Mol Sci},
+  year    = {2012},
+  volume  = {2},
+  pages   = {242--253},
+  groups  = {MOLPRO},
+}
+
+@Article{KHW93,
+  author   = {Peter J. Knowles and Claudia Hampel and H.-J. Werner},
+  title    = {Coupled Cluster Theory for High Spin Open Shell Reference Wavefunctions},
+  journal  = {J. Chem. Phys.},
+  year     = {1993},
+  volume   = {99},
+  pages    = {5219--5227},
+  abstract = {The coupled cluster method restricted to single and double
+excitations (CCSD) is considered for the case of a spin restricted
+Hartree-Fock open shell reference determinant.
+A spin orbital based formulation, in which the cluster operator spans
+exactly the minimal first order interacting space, is presented, and
+computationally optimal working equations are given.
+In the limit of a large number of closed shell orbitals,
+the cost is identical to that of an optimum treatment of an equivalent closed
+shell problem, which is obtained as a special case of the formulation presented.
+The theory is applied to the calculation of a number of diatomic potential energ
+y functions, and
+compared with spin-unrestricted theory.},
+  doi      = {10.1063/1.465990},
+  groups   = {MOLPRO},
+  url      = {http://dx.doi.org/10.1063/1.465990},
+}
+
+@Article{KW92,
+  author  = {Peter J. Knowles and H.-J. Werner},
+  title   = {Internally Contracted Multiconfiguration Reference Configuration Interaction Calculations for Excited States},
+  journal = tca,
+  year    = {1992},
+  volume  = {84},
+  pages   = {95--103},
+  groups  = {MOLPRO},
+}
+
+@Article{AAHK91,
+  author  = {Roger D Amos and Jamie S Andrews and Nicholas C Handy and Peter J Knowles},
+  title   = {Open Shell {M{{\o}}ller--Plesset} Perturbation Theory},
+  journal = {Chem. Phys. Letters},
+  year    = {1991},
+  volume  = {185},
+  pages   = {256--264},
+  groups  = {MOLPRO},
+}
+
+@Article{KAAHP91,
+  author  = {Peter J. Knowles and Jamie S. Andrews and Roger D. Amos and Nicholas C. Handy and John A. Pople},
+  title   = {Restricted {M{\o}ller--Plesset} Theory for Open Shell Molecules},
+  journal = {Chem. Phys. Letters},
+  year    = {1991},
+  volume  = {186},
+  pages   = {130--136},
+  comment = {accepted with priority, 18/9/91},
+  groups  = {MOLPRO},
+}
+
+@Article{KH89,
+  author  = {Peter J. Knowles and Nicholas C Handy},
+  title   = {A Determinant Based Full Configuration Interaction Program},
+  journal = cpc,
+  year    = {1989},
+  volume  = {54},
+  pages   = {75--83},
+  doi     = {10.1016/0010-4655(89)90033-7},
+  groups  = {MOLPRO},
+  url     = {http://dx.doi.org/10.1016/0010-4655(89)90033-7},
+}
+
+@Article{WK88,
+  author  = {H.-J. Werner and Peter J. Knowles},
+  title   = {An Efficient Internally Contracted Multiconfiguration Reference {CI} Method},
+  journal = {J. Chem. Phys.},
+  year    = {1988},
+  volume  = {89},
+  pages   = {5803--5814},
+  doi     = {10.1063/1.455556},
+  groups  = {MOLPRO},
+  url     = {http://dx.doi.org/10.1063/1.455556},
+}
+
+@Article{KW88,
+  author  = {Peter J. Knowles and H.-J. Werner},
+  title   = {An Efficient Method for the Evaluation of Coupling Coefficients in Configuration Interaction Calculations},
+  journal = {Chem. Phys. Letters},
+  year    = {1988},
+  volume  = {145},
+  pages   = {514--522},
+  doi     = {10.1016/0009-2614(88)87412-8},
+  groups  = {MOLPRO},
+  url     = {http://dx.doi.org/10.1016/0009-2614(88)87412-8},
+}
+
+@Article{WK85,
+  author  = {H.-J. Werner and Peter J. Knowles},
+  title   = {A Second Order {MCSCF} Method with Optimum Convergence},
+  journal = {J. Chem. Phys.},
+  year    = {1985},
+  volume  = {82},
+  pages   = {5053},
+  doi     = {10.1063/1.448627},
+  groups  = {MOLPRO},
+  url     = {http://dx.doi.org/10.1063/1.448627},
+}
+
+@Article{KW85,
+  author  = {Peter J. Knowles and H.-J. Werner},
+  title   = {An Efficient Second Order {MCSCF} Method for Long Configuration Expansions},
+  journal = {Chem. Phys. Letters},
+  year    = {1985},
+  volume  = {115},
+  pages   = {259--267},
+  doi     = {10.1016/0009-2614(85)80025-7},
+  groups  = {MOLPRO},
+  url     = {http://dx.doi.org/10.1016/0009-2614(85)80025-7},
+}
+
+@Article{KH84,
+  author  = {Peter J. Knowles and Nicholas C Handy},
+  title   = {A New Determinant-based Full Configuration Interaction Method},
+  journal = {Chem. Phys. Letters},
+  year    = {1984},
+  volume  = {111},
+  pages   = {315--321},
+  groups  = {MOLPRO},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
+@Comment{jabref-meta: groupstree:
+0 AllEntriesGroup:;
+1 ExplicitGroup:Vzor\;0\;;
+1 ExplicitGroup:MOLPRO\;0\;;
+}
