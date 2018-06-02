@@ -57,8 +57,8 @@
       </rdf:Description> 
       <rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/"> 
          <dc:format>application/pdf</dc:format> 
-         <dc:title><rdf:Alt><rdf:li xml:lang="x-default">Název práce</rdf:li></rdf:Alt></dc:title>
-         <dc:creator><rdf:Seq><rdf:li>Jméno Příjmení</rdf:li></rdf:Seq></dc:creator>
+         <dc:title><rdf:Alt><rdf:li xml:lang="x-default">Srážky elektronů s dvouatomovými molekulami</rdf:li></rdf:Alt></dc:title>
+         <dc:creator><rdf:Seq><rdf:li>Mikuláš Matoušek</rdf:li></rdf:Seq></dc:creator>
          <dc:publisher><rdf:Bag><rdf:li>Univerzita Karlova</rdf:li></rdf:Bag></dc:publisher>
          
          
@@ -90,9 +90,9 @@
       </rdf:Description> 
       <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/"> 
          <xmp:CreatorTool>LaTeX with hyperref package</xmp:CreatorTool> 
-         <xmp:ModifyDate>2018-05-24T21:36:36+02:00</xmp:ModifyDate> 
-         <xmp:CreateDate>2018-05-24T21:36:36+02:00</xmp:CreateDate> 
-         <xmp:MetadataDate>2018-05-24T21:36:36+02:00</xmp:MetadataDate> 
+         <xmp:ModifyDate>2018-06-03T00:04:51+02:00</xmp:ModifyDate> 
+         <xmp:CreateDate>2018-06-03T00:04:51+02:00</xmp:CreateDate> 
+         <xmp:MetadataDate>2018-06-03T00:04:51+02:00</xmp:MetadataDate> 
       </rdf:Description> 
       <rdf:Description rdf:about="" xmlns:xmpRights = "http://ns.adobe.com/xap/1.0/rights/"> 
          
@@ -100,7 +100,7 @@
       </rdf:Description> 
       <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"> 
          <xmpMM:DocumentID>uuid:E471EDA9-0143-B4EC-2929-27CBFE26697B</xmpMM:DocumentID> 
-         <xmpMM:InstanceID>uuid:9A3064A5-D6E5-00EE-2985-595980BD694D</xmpMM:InstanceID> 
+         <xmpMM:InstanceID>uuid:38B9090B-ABE2-DE3F-DA07-85E244777BE4</xmpMM:InstanceID> 
       </rdf:Description> 
    </rdf:RDF> 
 </x:xmpmeta> 

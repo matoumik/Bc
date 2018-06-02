@@ -12,9 +12,9 @@ A level-1 auxiliary file: literatura.aux
 The style file: unsrt.bst
 Database file #1: literatura.bib
 Warning--string name "molpro_url" is undefined
---line 105 of file literatura.bib
+--line 7 of file literatura.bib
 Warning--string name "molpro_address" is undefined
---line 106 of file literatura.bib
+--line 8 of file literatura.bib
 You've used 2 entries,
             1791 wiz_defined-function locations,
             465 strings with 4585 characters,

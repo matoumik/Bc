@@ -1,0 +1,35 @@
+\chapter{Výsledky}
+Zkoumali jsme molekuly $\mathrm{BeH/BeH^-}$ a $\mathrm{OH/OH^-}$, protože se jedná o 
+molekuly, které mají vázaný jak základní stav, tak anion, a zároveň se jedná o 
+dostatečně malé systémy, aby bylo možné provádět výpočty přesnými metodami.
+
+Ke kvantově chemickým výpočtům jsme používali program MOLPRO.\cite{MOLPRO-WIREs}\cite{MOLPRO}. 
+Pro určitý soubor mezijaderných vzdáleností\footnote{cca 35 hodnot} jsme napočítali 
+energii základního stavu molekuly pro fixovaná jádra, u základního stavu, tak u 
+aniontu. Ze znalosti těchto křivek jsme poté zjišťovali parametry molekul, které je 
+možné nalézt experimentálně, což jsou disociační energie aniontu i neutrální molekuly a 
+elektronové afinity vázané i úplně disociované\footnote{Ta odpovídá odpovídá 
+elektronové afinitě některého z prvků v molekule.} molekuly. Protože ale experimentální 
+data nejsou určená minimem potenciální energie molekuly, ale základní vibrační 
+hladinou, bylo třeba napočítat energetické hladiny získaného potenciálu. K tomu jsme 
+použili \? metodu výpočtu na na mříži \? . Vzhledem k počtu geometrií, pro které jsme 
+prováděli kvantově-chemické výpočty, který byl nedostatečný pro další numerické výpočty
+\footnote{a extrémní výpočetní náročnosti při případném výpočtu v dostatečném počtu 
+geometrií}, jsme získané hodnoty proložili kubickým splinem, ze kterého jsme pak 
+interpolovali hodnotu potenciálu v několika stovkách bodů. Poté jsme numericky získali 
+energetické hladiny v daném potenciálové křivce pro částici o (redukované) hmotnosti $
+\mu = m_1m_2/(m_1+m_2)$, kde $m_1,m_2$ jsou hmotnosti jednotlivých jader. Získané 
+vlastní stavy pak odpovídají vibračním stavům dané molekuly.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{../img/VibrStavy1.png}
+\caption{Nejnižší vibrační hladiny molekul $\mathrm{BeH/BeH^-}$}
+\label{Vibr1}
+\end{figure}
+
+\input{../tbl/BeH.tex}
+\input{../tbl/BeH-vibr.tex}
+\input{../tbl/OH.tex}
+\input{../tbl/OH-vibr.tex}
+\input{../tbl/OHan-vibr.tex}

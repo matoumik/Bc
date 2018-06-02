@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.8)  24 MAY 2018 21:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.8)  3 JUN 2018 00:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2225,8 +2225,21 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 120.
 (./makra.tex
 \c@veta=\count121
 \c@definice=\count122
-) (./prace.aux (./titulka.aux) (./uvod.aux) (./kap01.aux)
-(./kap02.aux) (./kap03.aux) (./kap04.aux) (./zaver.aux) (./literatura.aux))
+ (../tex/quantum.tex)) (./prace.aux (./titulka.aux) (./uvod.aux)
+(./kap01.aux) (./kap02.aux
+
+LaTeX Warning: Label `TODO' multiply defined.
+
+
+LaTeX Warning: Label `TODO' multiply defined.
+
+
+LaTeX Warning: Label `TODO' multiply defined.
+
+
+LaTeX Warning: Label `TODO' multiply defined.
+
+) (./kap03.aux) (./kap04.aux) (./zaver.aux) (./literatura.aux))
 \openout1 = `prace.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
@@ -2317,7 +2330,7 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 6.
 
 pdfTeX warning: pdflatex (file ../img/logo-cs.pdf): PDF inclusion: found PDF ve
 rsion <1.5>, but at most version <1.4> allowed
-<../img/logo-cs.pdf, id=62, 506.4591pt x 156.49065pt>
+<../img/logo-cs.pdf, id=54, 506.4591pt x 156.49065pt>
 File: ../img/logo-cs.pdf Graphic file (type pdf)
 <use ../img/logo-cs.pdf>
 Package pdftex.def Info: ../img/logo-cs.pdf  used on input line 10.
@@ -2399,39 +2412,78 @@ Kapitola 1.
 
  (./kap02.tex
 Kapitola 2.
-) [4
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 7.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 7.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 7.
+<../img/VibrStavy1.png, id=118, 462.528pt x 346.896pt>
+File: ../img/VibrStavy1.png Graphic file (type png)
+<use ../img/VibrStavy1.png>
+Package pdftex.def Info: ../img/VibrStavy1.png  used on input line 26.
+(pdftex.def)             Requested size: 330.05322pt x 247.55235pt.
+(../tbl/BeH.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1.
+
+
+Overfull \hbox (110.72127pt too wide) in paragraph at lines 5--31
+ [][] |
+ []
+
+) (../tbl/BeH-vibr.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1.
+
+) (../tbl/OH.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1.
+
+
+Overfull \hbox (75.37827pt too wide) in paragraph at lines 5--23
+ [][] |
+ []
+
+) (../tbl/OH-vibr.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1.
+
+) (../tbl/OHan-vibr.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1.
+
+)) [4
 
 
 
-]
+] [5 <../img/VibrStavy1.png>] [6] [7]
 \openout2 = `kap03.aux'.
 
- (./kap03.tex
-Kapitola 3.
-) [5
 
-
-
-]
+No file kap03.tex.
 \openout2 = `kap04.aux'.
 
- (./kap04.tex
-Kapitola 4.
-) [6
-
-
-
-]
+No file kap04.tex.
 \openout2 = `zaver.aux'.
 
- (./zaver.tex) [7
+(./zaver.tex) [8
+
+
+
+
 
 
 
 ]
 \openout2 = `literatura.aux'.
 
- (./literatura.tex (./prace.bbl)) [8
+ (./literatura.tex (./prace.bbl)) [9
 
 
 
@@ -2439,21 +2491,21 @@ Kapitola 4.
 \tf@lof=\write7
 \openout7 = `prace.lof'.
 
+ [10
 
-[9
 
-
-] (./prace.lot)
+]
+(./prace.lot)
 \tf@lot=\write8
 \openout8 = `prace.lot'.
 
- [10
+ [11
 
-] [11
+] [12
 
 ]
 P\v {r}\'{\i }loha A.
-[12
+[13
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
@@ -2463,24 +2515,34 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package rerunfilecheck Info: File `prace.out' has not changed.
-(rerunfilecheck)             Checksum: 9A153949AE419549668E3A4AA0A1DC7E;1604.
+(rerunfilecheck)             Checksum: 4FFF756B5A380EC4F187F7ADF37D881A;1248.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 15377 strings out of 494775
- 208618 string characters out of 6176849
- 266441 words of memory out of 5000000
- 18349 multiletter control sequences out of 15000+600000
- 56062 words of font info for 50 fonts, out of 8000000 for 9000
+ 15468 strings out of 494775
+ 209661 string characters out of 6176849
+ 291095 words of memory out of 5000000
+ 18396 multiletter control sequences out of 15000+600000
+ 87856 words of font info for 77 fonts, out of 8000000 for 9000
  91 hyphenation exceptions out of 8191
- 37i,6n,35p,490b,2256s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/
-public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmri12.pfb>
-Output written on prace.pdf (16 pages, 438146 bytes).
+ 37i,9n,35p,490b,2256s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm
+/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmsy8.pfb>
+Output written on prace.pdf (17 pages, 574320 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 33 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 41 named destinations out of 1000 (max. 500000)
+ 119 words of extra memory for PDF output out of 10000 (max. 10000000)
 
