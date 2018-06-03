@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.8)  3 JUN 2018 00:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.8)  3 JUN 2018 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2225,8 +2225,8 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 120.
 (./makra.tex
 \c@veta=\count121
 \c@definice=\count122
- (../tex/quantum.tex)) (./prace.aux (./titulka.aux) (./uvod.aux)
-(./kap01.aux) (./kap02.aux
+ (../tex/quantum.tex) (../tex/znacky.tex)) (./prace.aux
+(./titulka.aux) (./uvod.aux) (./kap01.aux) (./kap02.aux
 
 LaTeX Warning: Label `TODO' multiply defined.
 
@@ -2330,7 +2330,7 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 6.
 
 pdfTeX warning: pdflatex (file ../img/logo-cs.pdf): PDF inclusion: found PDF ve
 rsion <1.5>, but at most version <1.4> allowed
-<../img/logo-cs.pdf, id=54, 506.4591pt x 156.49065pt>
+<../img/logo-cs.pdf, id=58, 506.4591pt x 156.49065pt>
 File: ../img/logo-cs.pdf Graphic file (type pdf)
 <use ../img/logo-cs.pdf>
 Package pdftex.def Info: ../img/logo-cs.pdf  used on input line 10.
@@ -2418,7 +2418,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 7.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 7.
-<../img/VibrStavy1.png, id=118, 462.528pt x 346.896pt>
+<../img/VibrStavy1.png, id=130, 462.528pt x 346.896pt>
 File: ../img/VibrStavy1.png Graphic file (type png)
 <use ../img/VibrStavy1.png>
 Package pdftex.def Info: ../img/VibrStavy1.png  used on input line 26.
@@ -2515,7 +2515,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package rerunfilecheck Info: File `prace.out' has not changed.
-(rerunfilecheck)             Checksum: 4FFF756B5A380EC4F187F7ADF37D881A;1248.
+(rerunfilecheck)             Checksum: 7B81A4C3033C63DE76CD961117FC524E;1370.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2523,11 +2523,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 15468 strings out of 494775
- 209661 string characters out of 6176849
- 291095 words of memory out of 5000000
- 18396 multiletter control sequences out of 15000+600000
- 87856 words of font info for 77 fonts, out of 8000000 for 9000
+ 15477 strings out of 494775
+ 209782 string characters out of 6176849
+ 291155 words of memory out of 5000000
+ 18400 multiletter control sequences out of 15000+600000
+ 93853 words of font info for 79 fonts, out of 8000000 for 9000
  91 hyphenation exceptions out of 8191
  37i,9n,35p,490b,2256s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
@@ -2540,9 +2540,9 @@ type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on prace.pdf (17 pages, 574320 bytes).
+Output written on prace.pdf (17 pages, 581534 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 41 named destinations out of 1000 (max. 500000)
- 119 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 265 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
+ 127 words of extra memory for PDF output out of 10000 (max. 10000000)
 

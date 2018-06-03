@@ -1,4 +1,21 @@
-
 \chapter{Teorie}
 \section{}
+Základní cíl kvantově chemických výpočtů je najít řešení stacionární schrödingerovy rovnice
+\begin{equation}
+\op{H}\ket{\Psi} = E\ket{\Psi},
+\end{equation}
+kde $\ket{\Psi}$ je mnohačásticová vlnová funkce a $\op{H}$ je hamiltonián popisující daný 
+systém. Protože se jedná o dost složitý problém na numerické výpočty, je nutné zavést 
+několik zjednodušení. První je Born-Oppenhaimerova aproximace, která vzhledem k řádově 
+rozdílným hmotnostem jader a elektronů rozděluje pohyb jader a elektronů, čímž pádem 
+$\ket{\Psi}$ závisí na souřadnicích jader jen parametricky, 
+a nevystupují jako proměnné v 
+řešené rovnici. Další je popis mnohaelektronové vlnové funkce
+$\ket{\Psi}:= f(\vec{x_1} \dots \vec{x_i} \dots \vec{x_N})$, kde $\vec{x_i}$ jsou 
+polohy jednotlivých elektronů, pomocí součinu jednoelektronových funkcí
+$\ket{\Psi}:= f_1(\vec{x_1})f_2(\vec{x_2})\dots f_i(\vec{x_i})\dots f_N(\vec{x_N})$.
+Toto ale naráží na problém
+
 \section{Metody}
+\subsection{Hartree-Fock}
+Hartree-Fockova metoda (HF), též nazývaná metoda self-konzistentního pole, je jedna z nejjednodušších ab-initio metod, spočívající v optimalizaci jediného Slaterova determinantu.
