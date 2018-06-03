@@ -29,7 +29,13 @@ f_1(\vec{x}_2) & f_2(\vec{x}_2)&        & f_N(\vec{x}_2)\\
 f_1(\vec{x}_N) & f_2(\vec{x}_N)& \cdots & f_N(\vec{x}_N)
 \end{vmatrix}
 \end{equation}
-Dále musíme tuto funkci rozvinout do nějaké báze. Úplná báze prostoru, na kterém pracujeme, by byla nekonečná. Proto musíme najít takovou bázi, abychom mohli problém řešit s dostatečnou přesností v konečné bázi.\footnote{I když pořád platí: \uv{Čím víc, tím líp.}}
+Dále musíme tuto funkci rozvinout do nějaké báze. Úplná báze prostoru, na kterém 
+pracujeme, by byla nekonečná. Proto musíme najít takovou bázi, abychom mohli problém 
+řešit s dostatečnou přesností v konečné bázi.\footnote{I když pořád platí: \uv{Čím víc, 
+tím líp.}}
 \section{Metody}
+\subsection{Báze}
+Jako základ pro konstrukci řešení se v kvantové chemii berou orbitaly vodíku podobných atomů, se středem na jednotlivých jádrech. Jejich lineární kombinací získáváme molekulové orbitaly, kde optimalizací koeficientů této lineární kombinace se snažíme dosáhnout toho, aby získané orbitaly byly vlastními stavy hamiltoniánu dané molekuly.
+Prvním krokem ovšem je napočítat skalární součiny mezi jednotlivými bázovými vektory a matici hamiltoniánu v dané bázi. To se ukázalo být výpočetně náročné, neboť je třeba numericky řešit velké množství integrálů. Proto se radiální část aproximuje lineární kombinací několika gausovských funkcí, kde již velká část integrálů má analytické vyjádření, čímž se řádově sníží čas výpočtu.
 \subsection{Hartree-Fock}
-Hartree-Fockova metoda (HF), též nazývaná metoda self-konzistentního pole, je jedna z nejjednodušších ab-initio metod, spočívající v optimalizaci jediného Slaterova determinantu.
+Hartree-Fockova metoda (HF), též nazývaná metoda self-konzistentního pole, je jedna z nejjednodušších ab-initio metod, spočívající v optimalizaci jediného Slaterova determinantu. 
