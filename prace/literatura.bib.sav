@@ -1,102 +1,4 @@
 % Encoding: UTF-8
-%
-%  An example of a bibliographical database for bibTeX
-%
-%  Recommended software for maintenance of *.bib files:
-%    JabRef, http://jabref.sourceforge.net/
-%
-%  BEWARE:
-%
-%    *  If a name contains a capital letter, which must be kept such,
-%       use curly brackets ({T}hailand, {HIV}).
-%
-%  ===========================================================================
-
-@Book{Andel07,
-  title     = {Základy matematické statistiky},
-  publisher = {Matfyzpress},
-  year      = {2007},
-  author    = {Anděl, J.},
-  series    = {Druhé opravené vydání},
-  address   = {Praha},
-  isbn      = {80-7378-001-1},
-  groups    = {Vzor},
-}
-
-@Book{Andel98,
-  title     = {Statistické metody},
-  publisher = {Matfyzpress},
-  year      = {1998},
-  author    = {Anděl, J.},
-  series    = {Druhé přepracované vydání},
-  address   = {Praha},
-  isbn      = {80-85863-27-8},
-  groups    = {Vzor},
-}
-
-@Article{Cox72,
-  author  = {Cox, D. R.},
-  title   = {Regression models and life-tables (with {D}iscussion)},
-  journal = {Journal of the Royal Statistical Society, Series B},
-  year    = {1972},
-  volume  = {34},
-  number  = {2},
-  pages   = {187--220},
-  groups  = {Vzor},
-}
-
-@Article{DempsterLairdRubin77,
-  author  = {Dempster, A. P. and Laird, N. M. and Rubin, D. B.},
-  title   = {Maximum likelihood from incomplete data via the {EM} algorithm},
-  journal = {Journal of the Royal Statistical Society, Series B},
-  year    = {1977},
-  volume  = {39},
-  number  = {1},
-  pages   = {1--38},
-  groups  = {Vzor},
-}
-
-@Article{Genberget08,
-  author  = {Genberg, B. L. and Kulich, M. and Kawichai, S. and Modiba, P. and Chingono, A. and Kilonzo, G. P. and Richter, L. and Pettifor, A. and Sweat, M. and Celentano, D. D.},
-  title   = {{HIV} risk behaviors in Sub-{S}aharan {A}frica and {N}orthern {T}hailand: {B}aseline behavioral data from project {A}ccept},
-  journal = {Journal of Acquired Immune Deficiency Syndrome},
-  year    = {2008},
-  volume  = {49},
-  pages   = {309--319},
-  groups  = {Vzor},
-}
-
-@Article{KaplanMeier58,
-  author  = {Kaplan, E. L. and Meier, P.},
-  title   = {Nonparametric estimation from incomplete observations},
-  journal = {Journal of the American Statistical Association},
-  year    = {1958},
-  volume  = {53},
-  number  = {282},
-  pages   = {457--481},
-  groups  = {Vzor},
-}
-
-@Book{LehmannCasella98,
-  title     = {Theory of Point Estimation},
-  publisher = {Springer-Verlag},
-  year      = {1998},
-  author    = {Lehmann, E. L. and Casella, G.},
-  series    = {{S}econd {E}dition},
-  address   = {New York},
-  isbn      = {0-387-98502-6},
-  groups    = {Vzor},
-}
-
-@Article{Student08,
-  author  = {Student},
-  title   = {On the probable error of the mean},
-  journal = {Biometrika},
-  year    = {1908},
-  volume  = {6},
-  pages   = {1-25},
-  groups  = {Vzor},
-}
 
 @Misc{MOLPRO,
   author  = {H.-J. Werner and P. J. Knowles and G. Knizia and F. R. Manby and M. {Sch\"{u}tz} and P. Celani and T. Korona and R. Lindh and A. Mitrushenkov and G. Rauhut and K. R. Shamasundar and T. B. Adler and R. D. Amos and A. Bernhardsson and A. Berning and D. L. Cooper and M. J. O. Deegan and A. J. Dobbyn and F. Eckert and E. Goll and C. Hampel and A. Hesselmann and G. Hetzer and T. Hrenar and G. Jansen and C. K\"oppl and Y. Liu and A. W. Lloyd and R. A. Mata and A. J. May and S. J. McNicholas and W. Meyer and M. E. Mura and A. Nicklass and D. P. O'Neill and P. Palmieri and D. Peng and K. Pfl\"uger and R. Pitzer and M. Reiher and T. Shiozaki and H. Stoll and A. J. Stone and R. Tarroni and T. Thorsteinsson and M. Wang},
@@ -249,6 +151,22 @@ compared with spin-unrestricted theory.},
   volume  = {111},
   pages   = {315--321},
   groups  = {MOLPRO},
+}
+
+@Article{Dunning-basis,
+  author  = {Dunning,Thom H.},
+  title   = {Gaussian basis sets for use in correlated molecular calculations. I. The atoms boron through neon and hydrogen},
+  journal = {The Journal of Chemical Physics},
+  year    = {1989},
+  volume  = {90},
+  number  = {2},
+  pages   = {1007-1023},
+  doi     = {10.1063/1.456153},
+  eprint  = {https://doi.org/10.1063/1.456153},
+  url     = { 
+        https://doi.org/10.1063/1.456153
+    
+},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

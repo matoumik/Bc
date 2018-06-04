@@ -1,0 +1,11 @@
+\newcommand{\ltable}[2]{%
+\afterpage{
+    \clearpage% Flush earlier floats (otherwise order might not be correct)
+    \thispagestyle{empty}% empty page style (?)
+    \begin{landscape}% Landscape page
+        \centering % Center table
+        \captionof{table}{#2}% Add 'table' caption
+        \input{#1}
+    \end{landscape}
+    \clearpage% Flush page
+}}
