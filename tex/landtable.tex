@@ -5,7 +5,18 @@
     \begin{landscape}% Landscape page
         \centering % Center table
         \captionof{table}{#2}% Add 'table' caption
+        \bigskip
         \input{#1}
     \end{landscape}
     \clearpage% Flush page
 }}
+
+\newcommand{\htable}[2]{%
+    \begin{landscape}% Landscape page
+        \centering
+        \caption{#2} % Center table
+        %\captionof{table}{#2}% Add 'table' caption
+        \bigskip
+        \input{#1}
+    \end{landscape}
+}

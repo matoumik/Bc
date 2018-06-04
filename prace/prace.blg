@@ -15,45 +15,45 @@ Warning--string name "molpro_url" is undefined
 --line 7 of file literatura.bib
 Warning--string name "molpro_address" is undefined
 --line 8 of file literatura.bib
-You've used 2 entries,
+You've used 3 entries,
             1791 wiz_defined-function locations,
-            465 strings with 4585 characters,
-and the built_in function-call counts, 1011 in all, are:
-= -- 35
-> -- 157
+            473 strings with 4782 characters,
+and the built_in function-call counts, 1241 in all, are:
+= -- 57
+> -- 161
 < -- 0
-+ -- 53
-- -- 51
-* -- 117
-:= -- 209
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 2
++ -- 55
+- -- 52
+* -- 135
+:= -- 244
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 3
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 14
-empty$ -- 42
-format.name$ -- 51
-if$ -- 180
+cite$ -- 3
+duplicate$ -- 23
+empty$ -- 68
+format.name$ -- 52
+if$ -- 232
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 1
-newline$ -- 13
-num.names$ -- 2
-pop$ -- 8
+int.to.str$ -- 3
+missing$ -- 2
+newline$ -- 18
+num.names$ -- 3
+pop$ -- 9
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 6
+skip$ -- 9
 stack$ -- 0
-substring$ -- 25
-swap$ -- 2
+substring$ -- 52
+swap$ -- 3
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 4
-width$ -- 3
-write$ -- 23
+while$ -- 6
+width$ -- 4
+write$ -- 34
 (There were 2 warnings)

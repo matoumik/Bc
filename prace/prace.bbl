@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{Dunning-basis}
+Thom~H. Dunning.
+\newblock Gaussian basis sets for use in correlated molecular calculations. i.
+  the atoms boron through neon and hydrogen.
+\newblock {\em The Journal of Chemical Physics}, 90(2):1007--1023, 1989.
+
 \bibitem{MOLPRO-WIREs}
 H.-J. Werner, P.~J. Knowles, G.~Knizia, F.~R. Manby, and M.~Sch{\"u}tz.
 \newblock {Molpro: a general‐purpose quantum chemistry program package}.
