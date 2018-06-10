@@ -1,6 +1,12 @@
 **/*.aux
 **/*.log
+**/*.lof
+**/*.lot
+**/*.toc
 **/*.out
 **/*.bak
 **/*.sav
+**/*.xmpi
+**/.hidden
+
 

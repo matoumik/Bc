@@ -1,15 +1,28 @@
 \chapter{Teorie}
-\section{\TD}
-Základní cíl kvantově chemických výpočtů je najít řešení stacionární schrödingerovy rovnice
+\section{Popis problému}
+\label{approx}
+Základní cíl kvantově chemických výpočtů je najít řešení stacionární Schrödingerovy rovnice
 \begin{equation}
 \op{H}\ket{\Psi} = E\ket{\Psi},
 \end{equation}
 kde $\ket{\Psi}$ je mnohačásticová vlnová funkce a $\op{H}$ je hamiltonián popisující 
-danou molekulu.
+danou molekulu, který při zanedbání magnetických i relativistických efektů nabývá tvaru
+\begin{equation}
+\op{H} =-\sum_{j}\frac{1}{2M_j}\Delta_j 
+-\sum_{e}\frac{1}{2m_e}\Delta_e
+ -\sum_{j,e} \frac{Z_{j}}{R_{j\,e}}
+ +\sum_{j_1,j_2} \frac{Z_{j_1}Z_{j_2}}{R_{j_1 j_2}} 
+ +\sum_{e_1,e_2} \frac{1}{R_{e_1 e_2}},
+\end{equation}
+kde sčítání přes $j$ znamená sčítání přes jádra, $e$ přes elektrony a sčítání přes 
+dvojici indexů odpovídá sčítání přes všechny dvojice různých částic daného typu. 
+$R_{a\,b}$ pak značí $|\vec{x}_a - \vec{x}_b|$, kde $\vec{x}_{a,b}$ jsou polohy 
+jednotlivých částic.
+
 Protože se jedná o dost složitý problém na numerické výpočty, je nutné zavést 
 několik zjednodušení. 
 
-První je Born-Oppenhaimerova aproximace, která vzhledem k řádově 
+Prvním je Born-Oppenhaimerova aproximace, která vzhledem k řádově 
 rozdílným hmotnostem jader a elektronů rozděluje pohyb jader a elektronů, čímž pádem 
 $\ket{\Psi}$ závisí na souřadnicích jader jen parametricky, 
 a nevystupují jako proměnné v 
@@ -18,23 +31,44 @@ a nevystupují jako proměnné v
 Další snahou je popis mnohaelektronové vlnové funkce
 $\ket{\Psi}:= f(\vec{x}_1 \dots \vec{x}_N)$, kde $\vec{x}_i$ jsou 
 polohy jednotlivých elektronů, pomocí součinu jednoelektronových funkcí
-$\ket{\Psi}:= f_1(\vec{x}_1)f_2(\vec{x}_2)\dots f_N(\vec{x}_N)$.
+$\ket{\Psi}:= \phi_1(\vec{x}_1)\phi_2(\vec{x}_2)\dots \phi_N(\vec{x}_N)$.
 Pak ale narážíme na požadavek antisymetrie vlnové funkce vůči prohození libovolných 2 
 elektronů. Proto používáme vlnové funkce ve tvaru Slaterova determinantu
 \begin{equation}
-\ket{\Psi} = \frac{1}{\sqrt{N!}}\begin{vmatrix}
-f_1(\vec{x}_1) & f_2(\vec{x}_2)& \cdots & f_N(\vec{x}_1) \\
-f_1(\vec{x}_2) & f_2(\vec{x}_2)&        & f_N(\vec{x}_2)\\
+\ket{\Psi}_{\mathrm{SD}} = \frac{1}{\sqrt{N!}}\begin{vmatrix}
+\phi_1(\vec{x}_1) & \phi_2(\vec{x}_2)& \cdots & \phi_N(\vec{x}_1) \\
+\phi_1(\vec{x}_2) & \phi_2(\vec{x}_2)&        & \phi_N(\vec{x}_2)\\
 \vdots         &               & \ddots & \vdots \\
-f_1(\vec{x}_N) & f_2(\vec{x}_N)& \cdots & f_N(\vec{x}_N)
+\phi_1(\vec{x}_N) & \phi_2(\vec{x}_N)& \cdots & \phi_N(\vec{x}_N)
 \end{vmatrix}
 \end{equation}
 Dále musíme tuto funkci rozvinout do nějaké báze. Úplná báze prostoru, na kterém 
 pracujeme, by byla nekonečná. Proto musíme najít takovou bázi, která umožňuje problém 
 řešit s dostatečně přesně s konečným počtem prvků.\footnote{I když pořád platí: \uv{Čím víc, tím líp.}}
+\subsection{Vibrační hladiny}
+Pokud u dvouatomové molekuly známe pro každou vzdálenost jader energii celého systému,
+nechovají se ani jádra jako klasická částice, ale chovají se jako jedna částice, pohybující se v získaném potenciálu. Je třeba ovšem pracovat v těžišťové soustavě,
+čímž této částici je nutné přiřadit redukovanou hmotnost
+\begin{equation}
+\mu = \frac{M_1M_2}{M_1+M_2},
+\end{equation}
+kde $M_1, M_2$ jsou hmotnosti jader. Poté řešíme jednočásticovou Schrödingerovu rovnici pro pohyb v daném potenciálu.
+\subsection{Molekulová symetrie}
+Symetrie zkoumané molekuly se projeví symetrií jejího hamiltoniánu, která určitým 
+způsobem promítne do symetrie vlnové funkce.
+Molekuly, jimiž se zabýváme, jsou heteronukleární diatomika, které patří do bodové grupy 
+symetrie $C_{\infty_h}$. Tato symetrie se projeví možností klasifikovat vlastní stavy 
+pomocí symetrii vůči rotaci kolem spojnice jader, což odpovídá přiřazení určité hodnoty 
+průmětu momentu hybnosti do této osy. Používá se značení molekulových stavů
+\begin{equation}
+^{2S+1}\Lambda^{+/-},\;\;\mathrm{kde }\;\Lambda\in\left\lbrace \Sigma, \Pi,\Delta \dots 
+\right\rbrace
+\end{equation}
+a $S$ je celkový spin molekuly. $+/-$ pak značí změnu znaménka při zrcadlení v rovině 
+obsahující osu symetrie, kterou má význam uvažovat jen u $\Sigma$ stavu.
 
-\TD Symetrie \?
-
+Bohužel většina kvantově-chemických programů neumí pracovat s neabelovskými grupami, 
+proto je třeba vzít největší abelovskou bodovou grupu do které molekula , kterou v tomto případě je $C_{2h}$, která má 4 irreducibilní reprezentace umožňující klasifikaci stavů, značené $A_1, A_2, B_1, B_2$. Je tedy třeba před výpočtem hledaný stav molekuly vyjádřit v této reprezentaci.
 \section{Metody}
 \subsection{Báze}
 Jako základ pro konstrukci řešení se v kvantové chemii berou orbitaly vodíku podobných 
@@ -44,7 +78,7 @@ dosáhnout toho, aby získané orbitaly byly vlastními stavy hamiltoniánu dan�
 Prvním krokem ovšem je napočítat skalární součiny mezi jednotlivými bázovými vektory a 
 matici hamiltoniánu v dané bázi. To se ukázalo být výpočetně náročné, neboť je třeba 
 numericky řešit velké množství integrálů. Proto se radiální část aproximuje lineární 
-kombinací několika gausovských funkcí, kde již velká část integrálů má analytické 
+kombinací několika gaussovských funkcí, kde již velká část integrálů má analytické 
 vyjádření, čímž se řádově sníží čas výpočtu.
 
 Bylo již vyvinuto nespočetné množství různých bází lišících se v přesnosti, výpočetní 
@@ -61,11 +95,25 @@ Hartree-Fockova metoda (HF), též nazývaná metoda self-konzistentního pole (
 nejjednodušších ab-initio metod, spočívající v optimalizaci jediného Slaterova 
 determinantu. Dále uvažuje, že každý elektron se pohybuje ve zprůměrovaném poli 
 ostatních elektronů, které je stacionární.
-Metoda postupuje iterativně, kdy se vyřeší pro každý elektron jednoelektronová  
-Schrödingerova rovnice, kde se k potenciálu přidává výměnný člen, který je artefaktem 
-požadavku antisymetrie vlnové funkce. Ze získaného jednoelektronového řešení pro 
-všechny elektrony pak získáme novou elektronovou hustotu, kterou použijeme v další 
-iteraci. Řešení pak získáme, pokud se nová elektronová hustota bude rovnat té staré.
+Definujeme pak Fockův operátor
+\begin{equation}
+\begin{split}
+\op{F}\ket{\phi_{e_i}} =& -\frac{1}{2m_e}\Delta\ket{\phi_{e_i}}
+-\sum_{j} \frac{Z_{j}}{R_{j\,e_i}}\ket{\phi_{e_i}}
++ \sum_{e \neq e_i} \ket{\phi_{e_i}}\braopket{\phi_{e}}{\frac{1}{R_{e\,e_i}}}{\phi_{e}}
++\\
+&+ \sum_{e \neq e_i} \delta_{\sigma_e \sigma_{e_i}}\ket{\phi_{e}}\braopket{\phi_{e_i}}{\frac{1}{R_{e\,e_i}}}{\phi_{e}},
+\end{split}
+\end{equation} 
+pomocí nejž pak zavádíme soustavu nazývanou Hartree-Fockovy rovnice
+\begin{equation}
+\op{F}\ket{\phi_{e_i}} = \epsilon_i \ket{\phi_{e_i}}.\label{Fockeq}
+\end{equation}
+Metoda postupuje iterativně, kdy pro nějaký počáteční odhad jednoelektronových funkcí vytvoříme Fockův operátor, u něj najdeme vlastní stavy, které pak použijeme pro vytvoření Fockova operátoru do další iterace.
+Řešení pak získáme, pokud funkce získané řešením \eqref{Fockeq} bude rovnat těm použitým ke konstrukci daného Fockova operátoru.
+Molekulové orbitaly vystupující v Slaterově determinantu hledáme jako lineární
+kombinaci orbitalů 
+atomových, kde variací koeficientů této kombinace hledáme řešení problému.
 
 Zatím jsme zanedbávali efekt elektronového spinu. Ten je nutný uvažovat především v 
 případě, že není obsazená valenční vrstva. Pak je nutné mít jednu sadu orbitalů pro 
@@ -73,5 +121,75 @@ každou projekci spinu zvlášť. Získáme pak metody nazývané restricted-Har
 (RHF), která uvažuje stejný tvar orbitalů pro obě projekce stejné a unrestricted-
 Hartree-Fock (UHF), která je má obecně různé pro každou projekci.
 
-\subsection{Multireferenční-SCF}
+\subsection{Multikonfigurační-SCF}
+Pro mnoho molekul je popis pomocí jednoho Slaterova determinantu nedostačující.
+Jedna z možností, jak toto řešit, je hledat řešení jako lineární kombinaci několika determinantů
+\begin{equation}
+\ket{\Psi} := \sum_i C_i \ket{\Psi_i}_{\mathrm{SD}},
+\end{equation}
+kde optimalizujeme zároveň jednotlivé determinanty spolu s koeficienty rozvoje $C_i$, 
+podobným způsobem jako u HF metody.
+Obesně se tato metoda nazývá multikonfigurační self-konzistentní pole (MC-SCF).
+Tato metoda vychází z molekulových orbitalů získaných z HF metody, které používá jako 
+prvotní odhad řešení pro optimalizaci.
+Pokud jako vstupní odhad použijeme všechny možné Slaterovy determinanty, které je možné  
+vytvořit z určité množiny molekulových orbitalů, nazývá se tato metoda complete active space-SCF (CAS-SCF). 
 
+\subsection{Konfigurační interakce}
+Metoda Konfigurační interakce (CI) vychází z toho, že molekulové orbitaly získané z Hartree-Fockovy metody tvoří úplnou bázi daného prostoru. V této bázi se pak snažíme hledat řešení ve tvaru
+\begin{equation}
+\ket{\Psi} := \sum_i C_i \ket{\Psi_i}_{\mathrm{SD}},
+\end{equation}
+Kde variujeme jen koeficienty rozvoje $C_i$.
+
+Pokud použijeme všechny možné determinanty, které je možné získat v daném prostoru, 
+získáváme metodu Full-CI (FCI). Touto metodou získáváme nejpřesnější řešení, za 
+platnosti aproximací vyslovených v části \ref{approx} pro danou bázi. Tato metoda je 
+ovšem výpočetně náročná.
+
+Pokud použijeme funkci získanou metodou MC-SCF a vytvoříme z nich o funkce získané 
+excitací elektronů do vyšších orbitalů, které používáme v rozvoji, získáme metodu
+multireferenční CI (MRCI). Je třeba ovšem specifikovat aktivní prostor, což je množina
+všech orbitalů, do kterých excitujeme. Určujeme jej zadáním počtu orbitalů pro 
+jednotlivé symetrie. 
+
+\subsection{Metoda spřažených clusterů}
+Nevýhodou metody CI je, že není takzvaně size-konzistentní\footnote{Výjimku v tomto 
+ohledu tvoří FCI, ale ta se nedá pro větší systémy použít}. To znamená, že energie 
+získaná touto metodou, pokud se použije na systém se dvěma neinteragujícími podsystémy 
+není rovna součtu energií z každého podsystému získaných tou samou metodou. 
+
+Proto existuje metoda spřažených clusterů (CC), která zavádí excitační operátor
+\begin{equation}
+\op{T} = \op{T}_1 + \op{T}_2 + \op{T}_3 + \dots,
+\end{equation}
+kde $\op{T}_i$ je lineární kombinace všech takových operátorů, které excitují $i$-
+elektronů z nějakého obsazeného orbitalu do nějakého neobsazeného.
+Koeficienty této lineární kombinace předem neznáme a řešení hledáme právě
+jejich optimalizací.
+Vlnovou funkci pak hledáme ve tvaru
+\begin{equation}
+\ket{\Psi} := \exp(\op{T}) \ket{\Psi_\mathrm{HF}}
+\end{equation}
+kde $\ket{\Psi_\mathrm{HF}}$ je základní stav získaný Hartree-Fockovou metodou.
+Bohužel použít úplný excitační operátor je příliš náročné,\footnote{Přece jen je to 
+ekvivalentní FCI} používají se jen první dva členy, čímž získáme metodu CCSD, případně 
+případně třetí započítáme perturbativně, čímž získáme metodu CCSD(T).
+
+\subsection{Kvantová teorie na mříži}
+Kvantová teorie na mříži je velmi podobná metodě konečných prvků.
+Vlnovou funkci vyjádříme pomocí jejích hodnot v ekvidistantně rozmístěných bodech.
+Druhou derivaci aproximujeme pomocí hodnot v daných bodech
+\begin{equation}
+\frac{\partial^2 \Psi}{\partial x^2}(x_i) \approx \frac{2\Psi(x_i)-\Psi(x_{i-1})-
+\Psi(x_{i+1})}{\Delta x^2},
+\end{equation}
+kde $\Delta x$ je rozestup bodů.
+S touto aproximací můžeme přepsat Schrödingerovu rovnici jako maticový problém
+\begin{equation}
+-\frac{1}{2m\Delta x^2} \Psi(x_{i-1}) 
++ \left(\frac{1}{m\Delta x^2}+V(x_i)\right) \Psi(x_i)
+-\frac{1}{2m\Delta x^2} \Psi(x_{i+1}) = E\,\Psi(x_i),
+\end{equation}
+což je standardní problém vlastních čísel tridiagonální matice.
+Vlastní vektory jsou pak hodnoty vlnové funkce v daných bodech.
