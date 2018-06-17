@@ -14,7 +14,7 @@ danou molekulu, který při zanedbání magnetických i relativistických efekt�
  +\sum_{j_1,j_2} \frac{Z_{j_1}Z_{j_2}}{R_{j_1 j_2}} 
  +\sum_{e_1,e_2} \frac{1}{R_{e_1 e_2}},
 \end{equation}
-kde sčítání přes $j$ znamená sčítání přes jádra, $e$ přes elektrony a sčítání přes 
+kde sčítání přes $j$ znamená sčítání přes všechna jádra, $e$ přes všechny elektrony a sčítání přes 
 dvojici indexů odpovídá sčítání přes všechny dvojice různých částic daného typu. 
 $R_{a\,b}$ pak značí $|\vec{x}_a - \vec{x}_b|$, kde $\vec{x}_{a,b}$ jsou polohy 
 jednotlivých částic.
@@ -39,26 +39,27 @@ elektronů. Proto používáme vlnové funkce ve tvaru Slaterova determinantu
 \phi_1(\vec{x}_1) & \phi_2(\vec{x}_2)& \cdots & \phi_N(\vec{x}_1) \\
 \phi_1(\vec{x}_2) & \phi_2(\vec{x}_2)&        & \phi_N(\vec{x}_2)\\
 \vdots         &               & \ddots & \vdots \\
-\phi_1(\vec{x}_N) & \phi_2(\vec{x}_N)& \cdots & \phi_N(\vec{x}_N)
+\phi_1(\vec{x}_N) & \phi_2(\vec{x}_N)& \cdots & \phi_N(\vec{x}_N),
 \end{vmatrix}
 \end{equation}
+který vzhledem k matematickým vlastnostem determinantu antisymetrii zajistí.
 Dále musíme tuto funkci rozvinout do nějaké báze. Úplná báze prostoru, na kterém 
 pracujeme, by byla nekonečná. Proto musíme najít takovou bázi, která umožňuje problém 
 řešit s dostatečně přesně s konečným počtem prvků.\footnote{I když pořád platí: \uv{Čím víc, tím líp.}}
 \subsection{Vibrační hladiny}
 Pokud u dvouatomové molekuly známe pro každou vzdálenost jader energii celého systému,
-nechovají se ani jádra jako klasická částice, ale chovají se jako jedna částice, pohybující se v získaném potenciálu. Je třeba ovšem pracovat v těžišťové soustavě,
+nechovají se ani jádra jako klasické částice, ale popisují se kvantově pomocí jedné částice, pohybující se v daném potenciálu. Je třeba ovšem pracovat v těžišťové soustavě,
 čímž této částici je nutné přiřadit redukovanou hmotnost
 \begin{equation}
 \mu = \frac{M_1M_2}{M_1+M_2},
 \end{equation}
-kde $M_1, M_2$ jsou hmotnosti jader. Poté řešíme jednočásticovou Schrödingerovu rovnici pro pohyb v daném potenciálu.
+kde $M_1, M_2$ jsou hmotnosti jader. Poté řešíme jednočásticovou Schrödingerovu rovnici pro pohyb v daném potenciálu, jejímž řešením získáme energetické hladiny a jim odpovídající pravděpodobnostní rozložení mezijaderné vzdálenosti.
 \subsection{Molekulová symetrie}
-Symetrie zkoumané molekuly se projeví symetrií jejího hamiltoniánu, která určitým 
+Symetrie zkoumané molekuly se projeví invariancí jejího hamiltoniánu vůči některým operacím, která se pak určitým 
 způsobem promítne do symetrie vlnové funkce.
 Molekuly, jimiž se zabýváme, jsou heteronukleární diatomika, které patří do bodové grupy 
 symetrie $C_{\infty_h}$. Tato symetrie se projeví možností klasifikovat vlastní stavy 
-pomocí symetrii vůči rotaci kolem spojnice jader, což odpovídá přiřazení určité hodnoty 
+pomocí symetrie vlnové funkce vůči rotaci kolem spojnice jader, což odpovídá přiřazení určité hodnoty 
 průmětu momentu hybnosti do této osy. Používá se značení molekulových stavů
 \begin{equation}
 ^{2S+1}\Lambda^{+/-},\;\;\mathrm{kde }\;\Lambda\in\left\lbrace \Sigma, \Pi,\Delta \dots 
@@ -68,7 +69,7 @@ a $S$ je celkový spin molekuly. $+/-$ pak značí změnu znaménka při zrcadle
 obsahující osu symetrie, kterou má význam uvažovat jen u $\Sigma$ stavu.
 
 Bohužel většina kvantově-chemických programů neumí pracovat s neabelovskými grupami, 
-proto je třeba vzít největší abelovskou bodovou grupu do které molekula , kterou v tomto případě je $C_{2h}$, která má 4 irreducibilní reprezentace umožňující klasifikaci stavů, značené $A_1, A_2, B_1, B_2$. Je tedy třeba před výpočtem hledaný stav molekuly vyjádřit v této reprezentaci.
+proto je třeba vzít největší abelovskou bodovou grupu do které molekula náleží. V tomto případě je to $C_{2h}$, která má 4 irreducibilní reprezentace umožňující klasifikaci stavů, značené $A_1, A_2, B_1, B_2$. Je tedy třeba před výpočtem hledaný stav molekuly vyjádřit v této reprezentaci.
 \section{Metody}
 \subsection{Báze}
 Jako základ pro konstrukci řešení se v kvantové chemii berou orbitaly vodíku podobných 
@@ -76,10 +77,10 @@ atomů, se středem na jednotlivých jádrech. Jejich lineární kombinací zís
 molekulové orbitaly, kde optimalizací koeficientů této lineární kombinace se snažíme 
 dosáhnout toho, aby získané orbitaly byly vlastními stavy hamiltoniánu dané molekuly.
 Prvním krokem ovšem je napočítat skalární součiny mezi jednotlivými bázovými vektory a 
-matici hamiltoniánu v dané bázi. To se ukázalo být výpočetně náročné, neboť je třeba 
+matici hamiltoniánu v dané bázi. To se ukazuje být výpočetně náročné, neboť je třeba 
 numericky řešit velké množství integrálů. Proto se radiální část aproximuje lineární 
 kombinací několika gaussovských funkcí, kde již velká část integrálů má analytické 
-vyjádření, čímž se řádově sníží čas výpočtu.
+vyjádření, čímž se řádově snižuje doba výpočtu.
 
 Bylo již vyvinuto nespočetné množství různých bází lišících se v přesnosti, výpočetní 
 náročnosti i metodami, pro které jsou primárně určené.
@@ -105,19 +106,25 @@ Definujeme pak Fockův operátor
 &+ \sum_{e \neq e_i} \delta_{\sigma_e \sigma_{e_i}}\ket{\phi_{e}}\braopket{\phi_{e_i}}{\frac{1}{R_{e\,e_i}}}{\phi_{e}},
 \end{split}
 \end{equation} 
-pomocí nejž pak zavádíme soustavu nazývanou Hartree-Fockovy rovnice
+pomocí nějž pak zavádíme soustavu nazývanou Hartree-Fockovy rovnice
 \begin{equation}
 \op{F}\ket{\phi_{e_i}} = \epsilon_i \ket{\phi_{e_i}}.\label{Fockeq}
 \end{equation}
-Metoda postupuje iterativně, kdy pro nějaký počáteční odhad jednoelektronových funkcí vytvoříme Fockův operátor, u něj najdeme vlastní stavy, které pak použijeme pro vytvoření Fockova operátoru do další iterace.
-Řešení pak získáme, pokud funkce získané řešením \eqref{Fockeq} bude rovnat těm použitým ke konstrukci daného Fockova operátoru.
+Metoda postupuje iterativně, kdy pro nějaký počáteční odhad jednoelektronových funkcí 
+vytvoříme Fockův operátor, u něj najdeme vlastní stavy, které pak použijeme pro 
+vytvoření Fockova operátoru do další iterace.
+Řešení pak získáme, pokud funkce získané řešením \eqref{Fockeq} budou dostatečně blízké 
+těm použitým ke konstrukci příslušného Fockova operátoru.
+
 Molekulové orbitaly vystupující v Slaterově determinantu hledáme jako lineární
 kombinaci orbitalů 
 atomových, kde variací koeficientů této kombinace hledáme řešení problému.
+Metoda je variační, což způsobuje, že energie získaná touto metodou je nutně vyšší než 
+správné vlastní stavy zkoumaného hamiltoniánu.
 
 Zatím jsme zanedbávali efekt elektronového spinu. Ten je nutný uvažovat především v 
 případě, že není obsazená valenční vrstva. Pak je nutné mít jednu sadu orbitalů pro 
-každou projekci spinu zvlášť. Získáme pak metody nazývané restricted-Hartree-Fock 
+každou projekci spinu zvlášť. Získáme pak dvě různé metody nazývané restricted-Hartree-Fock 
 (RHF), která uvažuje stejný tvar orbitalů pro obě projekce stejné a unrestricted-
 Hartree-Fock (UHF), která je má obecně různé pro každou projekci.
 
@@ -151,7 +158,7 @@ Pokud použijeme funkci získanou metodou MC-SCF a vytvoříme z nich o funkce z
 excitací elektronů do vyšších orbitalů, které používáme v rozvoji, získáme metodu
 multireferenční CI (MRCI). Je třeba ovšem specifikovat aktivní prostor, což je množina
 všech orbitalů, do kterých excitujeme. Určujeme jej zadáním počtu orbitalů pro 
-jednotlivé symetrie. 
+jednotlivé symetrie. Tyto metody, stejně jako MC-SCF, jsou variační.
 
 \subsection{Metoda spřažených clusterů}
 Nevýhodou metody CI je, že není takzvaně size-konzistentní\footnote{Výjimku v tomto 
@@ -174,7 +181,8 @@ Vlnovou funkci pak hledáme ve tvaru
 kde $\ket{\Psi_\mathrm{HF}}$ je základní stav získaný Hartree-Fockovou metodou.
 Bohužel použít úplný excitační operátor je příliš náročné,\footnote{Přece jen je to 
 ekvivalentní FCI} používají se jen první dva členy, čímž získáme metodu CCSD, případně 
-případně třetí započítáme perturbativně, čímž získáme metodu CCSD(T).
+případně třetí započítáme perturbativně, čímž získáme metodu CCSD(T). 
+Tyto metody ovšem už nejsou variační, takže mohou dát i nižší energii než je přesná hodnota. 
 
 \subsection{Kvantová teorie na mříži}
 Kvantová teorie na mříži je velmi podobná metodě konečných prvků.

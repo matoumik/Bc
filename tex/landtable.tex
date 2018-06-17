@@ -1,4 +1,4 @@
-\newcommand{\ltable}[2]{%
+\newcommand{\ltable}[3]{%
 \afterpage{
     \clearpage% Flush earlier floats (otherwise order might not be correct)
     \thispagestyle{empty}% empty page style (?)
@@ -6,17 +6,19 @@
         \centering % Center table
         \captionof{table}{#2}% Add 'table' caption
         \bigskip
+        \label{#3}
         \input{#1}
     \end{landscape}
     \clearpage% Flush page
 }}
 
-\newcommand{\htable}[2]{%
-    \begin{landscape}% Landscape page
-        \centering
-        \caption{#2} % Center table
-        %\captionof{table}{#2}% Add 'table' caption
+\newcommand{\htable}[3]{%
+    \begin{table}
+       \centering % Center table
+       \captionof{table}{#2}% Add 'table' caption
         \bigskip
+        \label{#3}
         \input{#1}
-    \end{landscape}
-}
+    \end{table}
+    }
+
