@@ -4,7 +4,6 @@
   author  = {H.-J. Werner and P. J. Knowles and G. Knizia and F. R. Manby and M. {Sch\"{u}tz} and P. Celani and T. Korona and R. Lindh and A. Mitrushenkov and G. Rauhut and K. R. Shamasundar and T. B. Adler and R. D. Amos and A. Bernhardsson and A. Berning and D. L. Cooper and M. J. O. Deegan and A. J. Dobbyn and F. Eckert and E. Goll and C. Hampel and A. Hesselmann and G. Hetzer and T. Hrenar and G. Jansen and C. K\"oppl and Y. Liu and A. W. Lloyd and R. A. Mata and A. J. May and S. J. McNicholas and W. Meyer and M. E. Mura and A. Nicklass and D. P. O'Neill and P. Palmieri and D. Peng and K. Pfl\"uger and R. Pitzer and M. Reiher and T. Shiozaki and H. Stoll and A. J. Stone and R. Tarroni and T. Thorsteinsson and M. Wang},
   title   = {MOLPRO, version 2012.1, a package of ab initio programs},
   year    = {2012},
-  note    = {see } # molpro_url,
   address = molpro_address,
   groups  = {MOLPRO},
 }
@@ -13,7 +12,6 @@
   author  = {H.-J. Werner and P. J. Knowles and G. Knizia and F. R. Manby and M. {Sch\"{u}tz} and others},
   title   = {MOLPRO, version 2012.1, a package of ab initio programs},
   year    = {2012},
-  note    = {see } # molpro_url,
   address = molpro_address,
   groups  = {MOLPRO},
 }
@@ -59,27 +57,6 @@ compared with spin-unrestricted theory.},
   year    = {1992},
   volume  = {84},
   pages   = {95--103},
-  groups  = {MOLPRO},
-}
-
-@Article{AAHK91,
-  author  = {Roger D Amos and Jamie S Andrews and Nicholas C Handy and Peter J Knowles},
-  title   = {Open Shell {M{{\o}}ller--Plesset} Perturbation Theory},
-  journal = {Chem. Phys. Letters},
-  year    = {1991},
-  volume  = {185},
-  pages   = {256--264},
-  groups  = {MOLPRO},
-}
-
-@Article{KAAHP91,
-  author  = {Peter J. Knowles and Jamie S. Andrews and Roger D. Amos and Nicholas C. Handy and John A. Pople},
-  title   = {Restricted {M{\o}ller--Plesset} Theory for Open Shell Molecules},
-  journal = {Chem. Phys. Letters},
-  year    = {1991},
-  volume  = {186},
-  pages   = {130--136},
-  comment = {accepted with priority, 18/9/91},
   groups  = {MOLPRO},
 }
 
@@ -214,7 +191,8 @@ compared with spin-unrestricted theory.},
 }
 
 @Article{CRC_Handbook90,
-  title   = {CRC Handbook of Chemistry and Physics, 2009--2010, 90th ed.},
+  author  = {D. R. Lide et al.},
+  title   = {{CRC Handbook of Chemistry and Physics, 2009--2010, 90th ed.}},
   journal = {Journal of the American Chemical Society},
   year    = {2009},
   volume  = {131},
@@ -230,11 +208,58 @@ compared with spin-unrestricted theory.},
 },
 }
 
+@Article{BeH-Rmat,
+  author   = {Daniel Darby-Lewis and Zdeněk Mašín and Jonathan Tennyson},
+  title    = {R-matrix calculations of electron impact electronic excitation of {BeH}},
+  journal  = {Journal of Physics B: Atomic, Molecular and Optical Physics},
+  year     = {2017},
+  volume   = {50},
+  number   = {17},
+  pages    = {175201},
+  abstract = {The R -matrix method is used to perform high-level calculations of electron collisions with beryllium mono-hydride at its equilibrium geometry with a particular emphasis on electron impact electronic excitation. Several target and scattering models are considered. The calculations were performed using (1) the UKRMol suite which relies on the use of Gaussian type orbitals (GTOs) to represent the continuum and (2) using the new UKRMol+ suite which allows the inclusion of B -spline type orbitals in the basis for the continuum. The final close-coupling scattering models used the UKRMol+ code and a frozen core, valence full configuration interaction, method based on a diffuse GTO atomic basis set. The calculated electronic properties of the molecule are in very good agreement with state-of-the-art electronic structure calculations. The use of the UKRMol+ suite proved critical since it allowed the use of a large R -matrix sphere (35 Bohr), necessary to contain the diffuse electronic states of the molecule. The corresponding calculations using UKRMol are not possible due to numerical problems associated with the combination of GTO-only continuum and a large R -matrix sphere. This work provides the first demonstration of the utility and numerical stability of the new UKRMol+ code. The inelastic cross sections obtained here present a significant improvement over the results of earlier studies on BeH.},
+  groups   = {Ab Initio},
+  url      = {http://stacks.iop.org/0953-4075/50/i=17/a=175201},
+}
+
+@Article{Koput_BeHan,
+  author  = {Koput Jacek},
+  title   = {Ab initio ground-state potential energy functions of beryllium monohydride ions: {$\mathrm{BeH}^+$ and $\mathrm{BeH}^-$}},
+  journal = {The Journal of Chemical Physics},
+  year    = {2013},
+  volume  = {139},
+  number  = {10},
+  pages   = {104309},
+  doi     = {10.1063/1.4820403},
+  eprint  = {https://doi.org/10.1063/1.4820403},
+  groups  = {Ab Initio},
+  url     = { 
+        https://doi.org/10.1063/1.4820403
+    
+},
+}
+
+@Article{Koput_BeH,
+  author  = {Koput,Jacek},
+  title   = {The ab initio ground-state potential energy function of beryllium monohydride, {BeH}},
+  journal = {The Journal of Chemical Physics},
+  year    = {2011},
+  volume  = {135},
+  number  = {24},
+  pages   = {244308},
+  doi     = {10.1063/1.3671610},
+  eprint  = {https://doi.org/10.1063/1.3671610},
+  url     = { 
+        https://doi.org/10.1063/1.3671610
+    
+},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: groupstree:
 0 AllEntriesGroup:;
 1 ExplicitGroup:MOLPRO\;0\;;
 1 ExplicitGroup:Experimental\;0\;;
+1 ExplicitGroup:Ab Initio\;0\;;
 1 ExplicitGroup:Theory\;0\;;
 }
