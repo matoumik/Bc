@@ -1,14 +1,45 @@
 \chapter*{Úvod}
 \addcontentsline{toc}{chapter}{Úvod}
+Při srážce volného elektronu s dvouatomovou molekulou může dojít k rezonančnímu
+zachycení elektronu a přechodnému vzniku aniontu této molekuly. Ten pak následně může 
+zanikat různými cestami, například se může elektron znovu odtrhnout, přičemž zanechá 
+molekulu v excitovaném stavu,
+případně může dojít k zachycení elektronu jedním z atomů a disociaci molekuly, nazývaný 
+disociační záchyt.
+Lze studovat i opačný proces, asociativní odtržení, kdy kombinací dvou atomů, z nichž 
+některý nese záporný náboj, vznikne neutrální molekula a volný elektron.
 
-Jedna z numerických metod v kvantové teorii rozptylu je výpočet pomocí R-matic.
+K popisu zmíněných jevů je třeba znát potenciálové křivky neutrální molekuly i aniontu.
+Pro neutrální molekulu lze použít křivky získat kvantově chemickými výpočty. Pro anion 
+lze kvantově chemické výpočty na určitém úseku potenciálové křivky použít, jen pokud 
+energie křivky v dané oblasti je nižší než energie základního stavu neutrální molekuly. 
+V opačném případě není nadbytečný elektron vázaný, ale přejde v rezonanci, což vede k 
+selhání kvantově chemických metod.
 
-Ta je podobná metodám kvantové chemie a některé z nich př\TD
+V takových oblastech je třeba získat výsledky, které pak použijeme v jaderné dynamice, 
+pomocí kvantové teorie rozptylu s použitím aproximace pevných jader.
+Jedna z metod vhodných pro tento účel je výpočet pomocí R-matic, což je metoda původně 
+vyvinutá pro použití v jaderné fyzice, ale ukázala se být užitečná i v rozptylu na 
+atomech a molekulách.
+Ta rozděluje prostor,na němž probíhá výpočet na dvě oblasti, vnitřní, kde se řeší celý 
+problém s okrajovými podmínkami, a vnější, kde se uvažuje jen 
+vlnová funkce volného elektronu, a v této oblasti se hledají taková řešení, která na 
+rozhraní s vnitřní oblastí navazují.
+V R-maticových výpočtech se používá báze popisující kontinuum, která se ve vnitřní  
+oblasti rozšíří o vlnové funkce popisující stavy neutrální molekuly.
 
-Pro R-maticové výpočty jsou důležité dva typy výpočtů. Primárně referenční výpočty, 
-kterými je třeba 
-získat disociační křivku jak neutrální molekuly, tak aniontu, co nejpřesnější tvarem i 
-relativní pozicí vůči sobě, které se pak používají pro kalibraci R-maticových výpočtů.
-Dále je třeba najít dobrý popis targetu, tedy metodu, která dobře popisuje i základní i 
-excitované stavy dané molekuly. Ta se pak použije v R-maticových výpočtech, 
-s bází rozšířenou o funkce popisující pohyb volného elektronu. Tyto tyto výpočty jsou výrazně náročnější, a proto je třeba, aby tato metoda byla sama nepříliš náročná a v relativně malé bázi dávala rozumně přesné výsledky v okolí rovnovážné geometrie.
+V R-maticových výpočtech se používají některé výsledky kvantové chemie. Pro 
+výpočty je třeba najít metodu a bázi dobře popisující základní i excitované stavy 
+neutrální molekuly, 
+v R-maticové teorii i dále v této práci obvykle nazývané target.
+Tato metoda musí být provedena v relativně malé bázi a musí dávat dostatečně přesné 
+výsledky pro geometrie na kterých provádíme rozptylový výpočet, v našem případě se 
+jedná o okolí rovnovážné vzdálenosti základního stavu neutrální molekuly.
+Dále je nutné nalézt potenciálové křivky základního stavu neutrální molekuly i aniontu, 
+které jsou dostatečně přesné, aby je bylo možné použít jako referenční data pro 
+nalezení vhodného nastavení vstupních parametrů u R-maticových výpočtů.
+
+Tato práce se bude zabývat hledáním a srovnáním 
+různých popisů na dvou konkrétních molekulách, BeH a OH,
+pro následné provedení R-maticových výpočtů.
+

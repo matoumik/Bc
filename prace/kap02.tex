@@ -17,7 +17,7 @@ elektronové afinity molekuly  ve vázaném stavu i asymptotickou elektronovou a
 která odpovídá 
 elektronové afinitě některého z prvků v molekule.  Protože ale experimentální 
 data nejsou určená minimem potenciální energie molekuly, ale základní vibrační 
-hladinou, bylo třeba získat vbrační energetické hladiny dané molekuly metodou uvedenou 
+hladinou, bylo třeba získat vibrační energetické hladiny dané molekuly metodou uvedenou 
 v části \ref{te_vibr}. Počet geometrií, pro které jsme 
 prováděli kvantově-chemické výpočty byl nedostatečný pro další numerické výpočty, a 
 tedy jsme získané hodnoty proložili kubickým splinem, ze kterého jsme pak 
@@ -152,12 +152,15 @@ aktivním prostorem $6,2,2,0$, které je zobrazeno na obrázku \ref{gr_Beh_6220}
 referenčním FCI v aug-cc-pVTZ bázi na pozadí šedou barvou. Zmenšeni, ale paradoxně i 
 zvětšení aktivního prostoru vedlo k výraznému zhoršení chování křivek, jak je zřejmé z 
 obrázků \ref{gr_Beh_5220} a \ref{gr_Beh_8330}. Ve všech uvedených výpočtech jsme 
-nechali zamrznutý nejspodnější orbital, ale jeho nezamrznutí téměř nemělo vliv na výsledek, 
+nechali zamrznutý nejspodnější orbital, ale jeho nezamrznutí téměř nemělo vliv na 
+výsledek, 
 což jsme zkoušeli u prvního zmíněného CAS-SCF výpočtu.
 
 V okolí rovnovážné geometrie první zmíněná metoda CAS-SCF popisuje velmi dobře křivky 
 získané metodou FCI pro stavy s energií do 6 eV nad základním stavem, kde začíná 
-selhávat použitá báze. Pro větší mezijaderné vzdálenosti pak metoda nedává dobré výsledky, ale to je obecný problém CAS-SCF metod a v R-maticových výpočtech nedělá tento jev až tak velké potíže.
+selhávat použitá báze. Pro větší mezijaderné vzdálenosti pak metoda nedává dobré 
+výsledky, ale to je obecný problém CAS-SCF metod a v R-maticových výpočtech nedělá 
+tento jev až tak velké potíže.
 
 \begin{figure}
 \centering
@@ -218,20 +221,31 @@ $[\mathrm{O}(^5\mathrm{S}) + \mathrm{H}(^2\mathrm{S})]$ & $[9.146]$ \\
 \bottomrule
 \end{tabular} 
 \end{table}
+
 \subsection{Referenční výpočty}
-Hodnotu disociační energie neutrální molekuly uvádí například \cite{CRC_Handbook90}, stejně jako elektronovou afinitu této molekuly i atomárního kyslíku.
+Pro různé metody jsme získali křivky neutrální molekuly i aniontu, z nich jsme získali
+disociační energii energie aniontu i neutrální molekuly, i rovnovážnou a asymptotickou 
+elektronovou afinitu neutrální molekuly. Získané hodnoty, spolu s experimentálními daty 
+jsou v tabulce \ref{oh1}
+Hodnotu disociační energie neutrální molekuly uvádí například \cite{CRC_Handbook90}, 
+stejně jako elektronovou afinitu této molekuly i atomárního kyslíku.
+
+Vibrační energetické hladin pro křivky neutrální molekuly, získané různými metodami 
+jsou v tabulce \ref{oh_vibr}. Referenční hodnoty jsou použity hodnoty převzaté z 
+\cite{OH_vibr}.
+
 \begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth]{../img/OH-vibr1.png}
-\caption{Potenciálové křivky základního stavu a nejnižší vibrační hladiny molekul $\mathrm{OH/OH^-}$}
-\label{VibrOH1}
+\includegraphics[width=0.8\textwidth]{../img/OH-vibr1.pdf}
+\caption{Potenciálové křivky základního stavu a nejnižší vibrační hladiny molekul $\mathrm{OH/OH^-}$ \label{VibrOH1}}
 \end{figure}
+
 \ltable{../tbl/OH.tex}{Některé získané měřitelné vlastnosti molekul $\mathrm{OH/OH^-}$}{oh1}
 \htable{../tbl/OH-vibr.tex}{Nejnižší čtyři vibrační hladiny molekuly $\mathrm{OH}$}{oh_vibr}
 \htable{../tbl/OHan-vibr.tex}{Nejnižší čtyři vibrační hladiny molekuly $\mathrm{OH^-}$}{ohan_vibr}
 
-\subsection{Popis targetu}
 
+\subsection{Popis targetu}
 Pro popis targetu jsme jednak provedli výpočet křivek pro srovnání metodou MRCI s 
 aktivním prostorem pro vstupní CAS-SCF 8,2,2,0 a bází aug-cc-pVQZ. Ukázalo se, stejně 
 jako pro molekulu BeH, že z metod použitelných v rozptylových výpočtech dobře popisuje 
@@ -240,7 +254,7 @@ získané touto metodou, spolu s referenčními křivkami v pozadí jsou v grafu
 \ref{gr_OH_6220}. Na rozdíl od výpočtu touto metodou pro molekulu BeH je zde vidět 
 nefyzikální nespojitost pro mezijadernou vzdálenost kolem $0.9\AA$. Tu jsme se 
 pokusili odstranit nastavením různých vah pro různé stavy. K odstranění nespojitosti 
-vedlo nastavení hodnoty váhy 0.5 na na oba degenerované stavy základní křivky $2^\Pi$ 
+vedlo nastavení hodnoty váhy 0.5 na na oba degenerované stavy základní křivky $^2\Pi$ 
 a váhy 1.0 na nejnižší stav  $^2\Sigma^+$. (Nejnižší vázaný excitovaný stav), s 
 nulovou váhou na všech ostatních stavech.
 
