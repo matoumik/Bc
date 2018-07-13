@@ -13,6 +13,7 @@
 }}
 
 \newcommand{\htable}[3]{%
+      \clearpage
     \begin{table}
        \centering % Center table
        \captionof{table}{#2}% Add 'table' caption
@@ -20,5 +21,6 @@
         \label{#3}
         \input{#1}
     \end{table}
+    \clearpage
     }
 
