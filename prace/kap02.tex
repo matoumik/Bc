@@ -3,7 +3,7 @@ V této práci jsme studovali dvojice molekul $\mathrm{BeH/BeH^-}$ a $\mathrm{OH
 které mají vázaný jak základní stav, tak anion, a zároveň se jedná o 
 dostatečně malé systémy, aby bylo možné provádět výpočty přesnými metodami.
 
-Ke kvantově chemickým výpočtům jsme používali balík programů 
+Ke kvantově chemickým výpočtům jsme použili balík programů
 MOLPRO\cite{MOLPRO-WIREs, MOLPRO}.
 CAS-SCF výpočty jsme prováděli pomocí programu MULTI \cite{WK85,KW85}, MRCI výpočty 
 pomocí programu CI \cite{KW92} a FCI výpočty pomocí programu FCI \cite{KH84,KH89}.
@@ -40,8 +40,8 @@ zápornou elektronovou afinitu.
 
 Asymptotické chování excitovaných stavů neutrální molekuly je v tabulce \ref{taBeHas}, 
 kde je popsáno asymptotické chování pomocí atomových stavů, relativní energie asymptoty 
-oproti asymptotě a molekulové stavy, které se k dané asymptotě limitně blíží. V závorce 
-je uvedena nejnižší asymptota, kterou jsme ve výpočtech neuvažovali.
+vůči nejnižší asymptotě a molekulové stavy jdoucí k dané asymptotě. V závorce 
+je uvedena nejnižší asymptota, kterou jsme již ve výpočtech neuvažovali.
 
 \begin{table}
 \centering
@@ -87,16 +87,15 @@ najít lze například v \cite{H-ElAf}. Disociační energie aniontu jsme
 v literatuře nenalezli, ale
 lze ji dopočítat pomocí
 \begin{equation}
-D(\mathrm{AB^-}) = D(\mathrm{AB}) + E_{ea}(B) - E_{ea}(AB), \label{eq_andiss}
+D_0(\mathrm{AB^-}) = D_0(\mathrm{AB}) + E_{a}(B) - E_{a}(AB), \label{eq_andiss}
 \end{equation}
-za předpokladu, že náboj zůstává na atomu B. Takto získanou hodnotu uvádíme v tabulce v závorce.
-
+za předpokladu, že náboj zůstává na atomu B.V tomto vzorci značí $E_{a}$ elektronovou afinitu a $D_0$ disociační energii. Takto získanou hodnotu uvádíme v tabulce v závorce.
 Nejnižší získané vibrační hladiny jsou v tabulce \ref{beh_vibr}.
 Experimentální hodnoty jsme převzali z \cite{BeH-LeRoy}.
    
 \begin{figure}
 \centering
-\includegraphics[width=0.95\textwidth]{../img/BeH-vibr1.png}
+\includegraphics[width=0.95\textwidth]{../img/BeH-vibr1.pdf}
 \caption{Potenciálové křivky základního stavu a nejnižší vibrační hladiny molekul $\mathrm{BeH/BeH^-}$}
 \label{VibrBeH1}
 \end{figure}
@@ -109,19 +108,19 @@ na použité bázi, a ve větší bázi se s metodou, případně aktivním pros
 CAS-SCF 
 výpočtu pro MRCI mění jen nepatrně. Ostatní veličiny ovšem závisí i na velikosti báze, 
 i na použité metodě, ale závislost na velikosti báze je o něco výraznější.
-Z výpočtu metodou FCI v cc-pTVZ bázi je vidět, že neaugmented báze selhávají. To není 
+Z výpočtu metodou FCI v cc-pTVZ bázi je vidět,
+že neaugmentované báze selhávají. To není 
 překvapivé, je totiž všeobecně známo, že pro popis aniontů je třeba používat augmented 
 báze.
 
 Získaná elektronová afinita vodíku ve velkých bázích se blíží přesné 
-hodnotě, ale jiné, především elektronová afinita se výrazně liší od 
+hodnotě, ale jiné, především elektronová afinita, se výrazně liší od 
 experimentu, navíc má evidentně tendenci konvergovat k jiné hodnotě, jak lze nahlédnout 
 z extrapolací na úplnou bázi. Ovšem experiment udává poměrně velkou chybu měření (cca $14\%$),
-navíc výpočty uvedené v \cite{Koput_BeH, Koput_BeHan}, se s většinou experimentálních  
+navíc výpočty uvedené v \cite{Koput_BeH, Koput_BeHan} se s většinou experimentálních  
 hodnot shodují, ale pro afinitu uvádí hodnotu $0.574\;\mathrm{eV}$, která je dosti 
 vzdálená 
-experimentální hodnotě, ale je v dobré shodě s našimi výsledky. Proto lze předpokládat 
-chybu v této experimentální hodnoté, což by pak automaticky znamenalo, že nebude 
+experimentální hodnotě, ale je v dobré shodě s našimi výsledky. Proto je třeba brát tuto hodnotu s rezervou, což by pak automaticky znamenalo, že nebude 
 důvěryhodná ani udaná hodnota disociační energie aniontu získaná pomocí
 \eqref{eq_andiss}. Nezanedbatelný je i rozdíl mezi našimi výpočty a experimentem v 
 disociační energii neutrální molekuly, ale u té se ve výše zmíněném článku 
@@ -146,7 +145,7 @@ použít metodu MRCI v dostatečně velké bázi. Vzhledem k tomu, že v aug-cc-
 křivka MRCI s aktivním prostorem 6,2,2,0 pro vstupní CAS-SCF výpočet velmi blízko FCI, 
 lze očekávat, že je tento aktivní prostor rozumně zvolen. Proto se jako dobrý kandidáa 
 kandidát na referenční výpočty pro nastavení výpočtu R.matic jeví výpočet MRCI s aktivním 
-prostorem vstupního CAS-SCF 6,2,2,0 v aug-cc-pV5Z, případně ve větší bázi nebo 
+prostorem vstupního CAS-SCF 6,2,2,0 v aug-cc-pV5Z, případně
 extrapolovaný na úplnou bázi.
 
 \begin{figure}
@@ -164,12 +163,12 @@ Křivky v legendě označené názvem báze jsou získány pomocí MRCI 6,2,2,0 
 \label{grBeHlindif}
 \end{figure}
 
-Vibrační hladiny sice se blíží experimentálním hodnotám. Z tabulky \ref{beh_vibr} je 
+Vibrační hladiny se blíží hodnotám z experimentu. Z tabulky \ref{beh_vibr} je 
 vidět, že pro jejich přesnost je podstatnější použitá báze než samotná metoda, s 
 výjimkou metody CCSD(T), která dává vyšší energie hladin než ostatní metody v dané 
-bázi, protože má tendenci zužovat potenciálovou jámu oproti jiným metodám.
+bázi, protože má obecně tendenci zužovat potenciálovou jámu oproti přesnému tvaru.
 
-Nejlépe z výpočtů sice vychází metoda CCSD(T) v aug-cc-pVQZ bázi, která ovšem špatně popisuje
+Nejlépe z výpočtů vibračních hladin sice vychází metoda CCSD(T) v aug-cc-pVQZ bázi, která ovšem špatně popisuje
 molekuly pro mezijaderné vzdálenosti v přechodu mezi rovnováhou a asymptotou.
 To je pro naší aplikaci podstatné, a proto se tato metoda pro referenční výpočet příliš 
 nehodí. Navíc shoda s experimentem je pravděpodobně způsobena náhodným vyrušením chyby způsobené metodou a chyby způsobené bází.
@@ -180,34 +179,36 @@ orbitalem, jak lze najít například v \cite{BeH-Rmat}, jedná se o časově n�
 výpočet. Proto jsme se pokusili najít metodu CAS-SCF s takovými parametry, aby 
 dostatečně dobře reprodukovala hodnoty získané přesnějšími metodami, protože by výrazně 
 zkrátila R-maticový výpočet.
-Prvně jsme provedli výpočet metodou FCI s 1 zamrznutým orbitalem, v bázi aug-cc-pVTZ, 
+Prvně jsme provedli výpočet metodou FCI s 1 zamrznutým orbitalem v bázi aug-cc-pVTZ, 
 který jsme použili jako referenční. Tentýž výpočet jsme provedli i s bází aug-cc-pVDZ, 
 přičemž srovnání je na obrázku \ref{gr_Beh_FCI}. Z něj vidíme, že od stavů s rozdílem 
 od základního stavu vyšším než cca 6 eV selhává popis pomocí aug-cc-pVDZ báze, a tedy 
 přesnost metod nad touto úrovní nemá smysl uvažovat, neboť větší báze již nelze v R-
 maticových výpočtech použít kvůli výpočetní náročnosti. Je vidět, že i metoda FCI se na 
 některých místech chová špatně, především kvůli velkému množství blízkých stavů, 
-přičemž se nám nedařilo zvolit počet stavů tak, aby se nějaký vyšší, který jsme již 
+přičemž se nám nedařilo zvolit počet stavů tak, aby nějaký vyšší, který jsme již 
 neuvažovali, nezasahoval do již zvolených stavů. U metody FCI to nedělalo tak výrazné 
 potíže s výjimkou některých zlomů a přeskakování ve vyšších excitovaných stavech, ale  
-nepodařilo se nám kvůli tomu provést výpočet metodou MRCI, který by uvažoval tyto 
-excitované stavy.
+nepodařilo se nám kvůli tomu provést výpočet metodou MRCI, 
+který by uvažoval takovéto množství excitovaných stavů.
 
 Zkusili jsme srovnat několik metod CAS-SCF v aug-cc-pVDZ bázi lišících se aktivním 
 prostorem a zjistili, že v okolí rovnovážné vzdálenosti dobře popisuje molekulu CAS-SCF 
-s 
+v této bázi s 
 aktivním prostorem $6,2,2,0$, které je zobrazeno na obrázku \ref{gr_Beh_6220} spolu s 
-referenčním FCI v aug-cc-pVTZ bázi na pozadí šedou barvou. Zmenšení
-aktivního prostoru vedlo k výraznému zhoršení popisu, zvětšení vedlo k zhoršení 
+referenčním FCI v aug-cc-pVTZ bázi na pozadí šedou barvou. Zvětšení aktivního prostoru 
+vedlo k zhoršení 
 konvergence metody, čímž vzniklo v křivkách velké množství nespojitostí. To by 
-teoreticky bylo možné odstranit nalezením vhodných vah pro jednotlivé stavy, ale popis by pravděpodobně nebyl o tolik lepší. Bez zadaných vah je výpočet s aktivním prostorem 8,3,3,0 na obrázku \ref{gr_Beh_8330}.
+teoreticky bylo možné odstranit nalezením vhodných vah pro jednotlivé stavy, ale popis 
+by pravděpodobně nebyl o tolik lepší. Bez zadaných vah je výpočet s aktivním prostorem 
+8,3,3,0 na obrázku \ref{gr_Beh_8330}.
 Dobrá konvergence aktivního prostoru 6,2,2,0 je dána tím, že se jedná o úplný valenční 
 prostor této molekuly - tedy prostor molekulových orbitalů, které vzniknou kombinací 
 atomových orbitalů uzavřených a valenčních slupek obou atomů.
 
 Ve všech výpočtech jsme 
 nechali zamrznutý nejnižší molekulový orbital, ale jeho nezamrznutí téměř nemělo vliv 
-na výsledek, což jsme pozorovali u zmíněného CAS-SCF výpočtu.
+na výsledek, což jsme pozorovali u zmíněného CAS-SCF výpočtu s aktivním prostorem 6,2,2,0.
 
 V okolí rovnovážné geometrie první zmíněná metoda CAS-SCF popisuje velmi dobře křivky 
 získané metodou FCI pro stavy s energií do 6 eV nad základním stavem, kde začíná 
@@ -216,7 +217,7 @@ výsledky, ale to je obecný problém CAS-SCF metod a v R-maticových výpočtec
 tento jev až tak velké potíže.
 
 Pro srovnání jsme provedli CAS-SCF výpočet s aktivním prostorem 6,2,2,0 v cc-PVTZ bázi, 
-který popisuje molekulu mnohem hůř, který je v grafu \ref{gr_Beh_TZ}. Je tedy 
+který popisuje molekulu mnohem hůř a je v grafu \ref{gr_Beh_TZ}. Je tedy 
 pravděpodobné, že pro tuto molekulu je nutné použít augmented bázi.
 \begin{figure}
 \centering
@@ -249,16 +250,16 @@ pravděpodobné, že pro tuto molekulu je nutné použít augmented bázi.
 
 \section{OH}
 Základní stav molekuly OH je $\mathrm{^2\Pi}$ s asymptotou 
-$\mathrm{O}(^3p) + \mathrm{H}(^2s)$. Další 
+$\mathrm{O}(^3P) + \mathrm{H}(^2S)$. Další 
 stavy jdoucí k této asymptotě jsou $\mathrm{^4\Pi, ^4\Sigma^-, ^2\Sigma^- }$.
-Nejnižší asymptoty neutrální molekuly jsou pak v tabulce \ref{taOHas}, v závorce je
-nejnižší asymptota, kterou jsme neuvažovali.
+Nejnižší tři asymptoty neutrální molekuly jsou pak v tabulce \ref{taOHas}, v závorce je
+první asymptota, kterou jsme neuvažovali.
 
- Anion je v základním stavu $^1\Sigma^+$, s asymptotou
+ Anion $\mathrm{O`^-}$ je v základním stavu $^1\Sigma^+$ s asymptotou
   $\mathrm{O^-}(^2\mathrm{P}) + \mathrm{H}(^2\mathrm{S})$. 
   K této asymptotě jdou ještě stavy
-  $\mathrm{^3\Sigma^+,^1\Pi, ^3\Pi}$
- Pod asymptotou základního stavu leží i asymptota 
+  $\mathrm{^3\Sigma^+,^1\Pi, ^3\Pi}$.
+ Pod asymptotou základního stavu neutrální molekuly leží i asymptota 
  $\mathrm{O}(^3\mathrm{P}) + \mathrm{H^-}(^1\mathrm{S})$, 
  ke které jdou stavy $\mathrm{^3\Sigma^-, ^3\Pi}$.
 
@@ -279,8 +280,22 @@ $[\mathrm{O}(^5\mathrm{S}) + \mathrm{H}(^2\mathrm{S})]$ & $[9.146]$ \\
 \end{tabular} 
 \end{table}
 
+Ukázka křivek pro všechny uvažované stavy neutrální molekuly i aniontu jsou vyobrazeny v grafu \ref{grOHL}. Křivky byly získány metodou MRCI s aktivním prostorem pro vstupní CAS-SCF výpočet 8,2,2,0 v aug-cc-pVQZ bázi.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.95\textwidth]{../img/OHstates.pdf}
+\caption{Potenciálové křivky stavů neutrální molekuly OH jdoucích ke 3 nejnižším asymptotám a aniontu $\mathrm{OH^-}$. U křivek aniontu v místech, kde zasahují nad křivku základního stavu neutrální molekuly již elektron není vázaný, a tedy získaná křivka v této oblasti již je nefyzikální.}
+\label{grOHL}
+\end{figure}
+
 \subsection{Referenční výpočty}
-Pro různé metody jsme získali křivky základního stavu neutrální molekuly i aniontu. Jiné křivky aniontu ani nejnižší asymptoty neutrální molekuly jsme neuvažovali, protože nejsou vázané a jedinou jejich veličinou srovnatelnou s experimentem je jejich asymptotické chování. To se pak navíc dá nastavit posunutím křivky.
+Pro různé metody jsme získali křivky základního stavu neutrální molekuly i aniontu. 
+Jiné křivky aniontu ani nejnižší asymptoty neutrální molekuly jsme neuvažovali, protože 
+nejsou vázané a jedinou jejich veličinou srovnatelnou s experimentem je jejich 
+asymptotické chování. To se pak navíc dá nastavit posunutím křivky a běžně se to při 
+použití křivek v R-maticových výpočtech provádí.
 Z nich jsme získali
 disociační energii energie aniontu i neutrální molekuly, i rovnovážnou a asymptotickou 
 elektronovou afinitu neutrální molekuly. Získané hodnoty, spolu s experimentálními daty 
@@ -295,15 +310,15 @@ aniontu jsme získali stejně jako u molekuly BeH pomocí \ref{eq_andiss}.
 \caption{Potenciálové křivky základního stavu a nejnižší vibrační hladiny molekul $\mathrm{OH/OH^-}$ \label{VibrOH1}}
 \end{figure}
 
-\htable{../tbl/OH.tex}{Srovnání elektronové afinity molekuly BeH,elektronové afinity 
-vodíku a disociačni energie OH i $\mathrm{OH^-}$ získaních několika metodami v různých 
+\htable{../tbl/OH.tex}{Srovnání elektronové afinity molekuly OH,elektronové afinity 
+vodíku a disociační energie OH i $\mathrm{OH^-}$ získaných několika metodami v různých 
 bázích s experimentem. Uváděné hodnoty jsou v elelektronvoltech. Poslední řádek odpovídá křivkám posunutým tak, aby elektronová afinita molekuly odpovídala experimentu.}{oh1}
 
 
 Je vidět, že všechny zmíněné veličiny se se zvětšující bází přibližují experimentálním 
 hodnotám. Při extrapolaci na úplnou bázi metody MRCI s aktivním prostorem 6,2,2,0 
 dokážeme dosáhnout experimentální hodnoty disociační energie neutrální molekuly i 
-očekávané disociační energie aniontu. Elektronové afinitý molekuly ani asymptoty 
+očekávané disociační energie aniontu. Elektronové afinity molekuly ani asymptoty 
 nedokážeme dosáhnout ani při extrapolaci na úplnou bázi, ale jejich rozdíl je téměř 
 totožný. Tedy vertikální posunutím křivek tak, aby disociační energie molekuly 
 odpovídala experimentu, dokážeme získat téměř přesnou hodnotu asymptotické energie. 
@@ -314,7 +329,7 @@ vidět, že asymptotické chování se blíží přesnému jen velmi pomalu se
 zvětšující se bází a téměř vůbec s větším aktivním prostorem CAS-SCF výpočtu.
 V grafu \ref{grOHlindif} jsou pak relativní rozdíly křivek v grafu \ref{grBeHlin} vůči 
 křivce získané pomocí MRCI 8,2,2,0 v aug-cc-pV5Z bázi. Z tohoto grafu je vidět, že pro 
-zvětšující bázi se křivky získané stejnou metodou mění čím dál víc lineárně lineárně. 
+zvětšující bázi se křivky získané stejnou metodou mění čím dál víc ě lineárně. 
 Proto je možno očekávat, že pokud posuneme křivky aby byla správná elektronová 
 afinita vázaného stavu i asymptoty, rozdíl ve všech bodech bude blízko přesné 
 hodnoty. Navíc i rozdíly mezi MRCI 6,2,2,0 a MRCI 8,2,2,0 ve stejné bázi
@@ -324,7 +339,7 @@ hodnoty. Navíc i rozdíly mezi MRCI 6,2,2,0 a MRCI 8,2,2,0 ve stejné bázi
 \centering
 \includegraphics[width=0.95\textwidth]{../img/OH-lin.pdf}
 \caption{Rozdíl potenciální křivky neutrální molekuly a aniontu získaných metodami MRCI 
-6,2,2,0 a MRCI 8,2,2,0 v bázích $\mathrm{aug-cc-pVXZ, x \in \left\lbrace D,T,Q,5\right
+6,2,2,0 a MRCI 8,2,2,0 v bázích aug-cc-pVXZ, $\mathrm{x \in \left\lbrace D,T,Q,5\right
 \rbrace }$. vodorovnou přerušovanou čarou je vyznačeno správné asymptotické chování, 
 svislou rovnovážná mezijaderná vzdálenost neutrální molekuly.}
 \label{grOHlin}
@@ -338,9 +353,14 @@ svislou rovnovážná mezijaderná vzdálenost neutrální molekuly.}
 \end{figure}
 
 Vibrační energetické hladin pro křivky neutrální molekuly, získané různými metodami 
-jsou v tabulce \ref{oh_vibr}. Referenční hodnoty jsou použity hodnoty převzaté z 
-\cite{OH_vibr}. Je vidět, že metoda CI 8,2,2,0 v aug-cc-pV5Z bázi  dává hodnoty téměř shodné s experimentálními, ale CI 6,2,2,0 ve stejné bázi, nebo extrapolace těchto metod nedává příliš velkou odchylku. 
-Proto  považujeme za vhodnou metodu pro referenční výpočty MRCI s aktivním prostorem pro vstupní CAS-SCF 8,2,2,0 v aug-cc-pV5Z,nebo případně extrapolované na úplnou bázi, kde se shodují disociační energie.
+jsou v tabulce \ref{oh_vibr}. Experimentální hodnoty jsou převzaté z 
+\cite{OH_vibr}. Je vidět, že metoda CI 8,2,2,0 v aug-cc-pV5Z bázi  dává hodnoty téměř 
+shodné s experimentálními, ale CI 6,2,2,0 ve stejné bázi, nebo extrapolace těchto metod 
+nedává příliš velkou odchylku. 
+Proto  považujeme za vhodnou metodu pro referenční výpočty MRCI s aktivním prostorem 
+pro vstupní CAS-SCF 8,2,2,0 v aug-cc-pV5Z,nebo lépe extrapolované na úplnou bázi, kde 
+se shodují disociační energie. Je třeba ale posunou křivky tak, aby se shodovala 
+elektronová afinita molekuly s experimentem.
 
 \htable{../tbl/OH-vibr.tex}{Nejnižší čtyři vibrační hladiny molekuly $\mathrm{OH}$ získané pomocí MRCI s různými aktivními prostory vstupního CASSCF a různých bázích.}{oh_vibr}
 
@@ -378,7 +398,8 @@ nepatrně lepší výsledky pro zmíněný první excitovaný stav, ale za cenu 
 aktivního prostoru a tím pádem i větší výpočetní náročnosti. Ale u tohoto výpočtu se 
 výrazně rozchází asymptotická energie pro stavy jdoucí k prostřední asymptotě, která 
 by správně měla být degenerovaná. To značí, že aktivní prostor je nevyvážený, protože 
-popisuje některé stavy molekuly lépe než jiné. Ale asymptotické chování je v popisu targetu nepříliš podstatné.
+popisuje některé stavy molekuly lépe než jiné. Ale asymptotické chování není při popisu 
+targetu příliš podstatné.
 
 Pro srovnání s výše zmíněným článkem jsme provedli CAS-SCF výpočet s aktivním prostorem 
 $4,2,2,0$ v aug-cc-pVDZ bázi. Opět jsme museli použít výše zmíněné váhy.
@@ -393,7 +414,7 @@ popisem v těchto dvou bázích je relativně malý rozdíl. Zároveň ale výpo
 metodou  v bázi aug-cc-pVDZ dává o něco lepší výsledky.
 
 Proto za vhodný popis targetu lze považovat SA-CAS-SCF v aug-cc-pVDZ s aktivním 
-prostorem 6,2,2,0 nebo 7,3,3,0 s výše opsanými váhami jednotlivých stavů
+prostorem 6,2,2,0 nebo 7,3,3,0 s výše popsanými vahami jednotlivých stavů
 
 \begin{figure}
 \centering

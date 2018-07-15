@@ -62,8 +62,10 @@ Bohužel většina kvantově-chemických programů neumí pracovat s neabelovsk�
 proto je třeba vzít největší abelovskou bodovou grupu do které molekula náleží. V 
 tomto 
 případě je to $C_{2v}$, která má 4 ireducibilní reprezentace umožňující klasifikaci 
-stavů, značené $A_1, A_2, B_1, B_2$. Při výpočtech pro určitý stav je tedy třeba 
+stavů, značené $A_1, B_1, B_2, A_2$. Při výpočtech pro určitý stav je tedy třeba 
 předem zadat, do které z těchto reprezentací hledaný stav patří.
+$\Sigma^+$ stavy jsou reprezentovány funkcemi z $A_1$, $\Sigma^-$ funkcemi z $A_2$.
+$\Pi$ stavy jsou degenerovány, a lze je reprezentovat jednou funkcí z $B_1$ a jednou z $B_2$. Podobně $\Delta$ stavům odpovídá po jedné funkci z $A_1$ a $A_2$.
 \section{Metody}
 \subsection{Hartreeho-Fockova metoda}
 Hartreeho-Fockova metoda (HF), též nazývaná metoda self-konzistentního pole (SCF), je 
@@ -123,7 +125,8 @@ Tato metoda často vychází z molekulových orbitalů získaných z HF metody, 
 prvotní odhad řešení pro optimalizaci.
 Pokud v rozvoji \eqref{MCSCF} použijeme všechny Slaterovy determinanty, které je možné  
 vytvořit z určité množiny molekulových orbitalů, nazývá se tato metoda complete active 
-space-SCF (CAS-SCF). 
+space-SCF (CAS-SCF). Pro výpočet excitovaných stavů se používá metoda state-averaged CAS-SCF (SA-CASSCF), která optimalizuje průměr všech hledaných stavů. Ve výchozím nastavení se všem stavům přisuzuje stejná váha, ale váhy stavů lze nastavit libovolně.
+V této práci budeme většinou metodu SA-CASSCF označovat jako CAS-SCF a pokud nebude řečeno jinak, budou použity stejné váhy na všech stavech.
 
 \subsection{Konfigurační interakce}
 Metoda konfigurační interakce (CI) uvažuje řešení ve tvaru
@@ -183,6 +186,12 @@ energie na limitu úplné báze.
 Pro popis vlnové funkce ve velkých vzdálenostech od jádra se pak přidávají takzvané 
 difuzní funkce, čímž pak získáváme takzvané augmented báze aug--cc--pVXZ
 
+Tyto báze umožňují ze dvou výpočtů stejnou metodou v různých bázích extrapolovat 
+korelační energii na úplnou bázi pomocí vztahu
+\begin{equation}
+E_\infty = \frac{N^3E_N - M^3E_M}{N^3-M^3},
+\end{equation}
+kde $M,N$ označují čísla odpovídající bázím ve kterých byla získána korelační energie.
 
 \subsection{Vibrační hladiny}
 \label{te_vibr}
